@@ -14,11 +14,11 @@ HTML 的语言形式为标签（如<p>）包围的 HTML元素，如:
 
 ### 刨析一个 HTML 元素：
 
-![img](https://document.youkeda.com/P3-1-HTML-CSS/1.2/2.jpg)
+![img](https://document.xxx.com/P3-1-HTML-CSS/1.2/2.jpg)
 
 ## HTML中的嵌套：
 
-![img](https://document.youkeda.com/P3-1-HTML-CSS/1.2/3.png)
+![img](https://document.xxx.com/P3-1-HTML-CSS/1.2/3.png)
 
 在HTML中，元素可以发生**嵌套**。
 
@@ -36,11 +36,11 @@ HTML 的语言形式为标签（如<p>）包围的 HTML元素，如:
 
 第一个元素整体为作为// <div></div> // 的内容，镶嵌在// <div></div> //内部，从结构上发生**嵌套**关系。
 
-div 是 p 的父元素，![img](https://document.youkeda.com/P3-1-HTML-CSS/1.2/16.png)
+div 是 p 的父元素，![img](https://document.xxx.com/P3-1-HTML-CSS/1.2/16.png)
 
 ## 对于完整的HTML文件：
 
-![img](https://document.youkeda.com/P3-1-HTML-CSS/1.2/4.jpg)
+![img](https://document.xxx.com/P3-1-HTML-CSS/1.2/4.jpg)
 
 有以上元素
 
@@ -84,7 +84,7 @@ div 是 p 的父元素，![img](https://document.youkeda.com/P3-1-HTML-CSS/1.2/1
 
 ## 对于 HTML 的注解：
 
-![img](https://document.youkeda.com/P3-1-HTML-CSS/1.2/6.png)
+![img](https://document.xxx.com/P3-1-HTML-CSS/1.2/6.png)
 
 ## 对于 // <img> //:
 
@@ -98,17 +98,17 @@ div 是 p 的父元素，![img](https://document.youkeda.com/P3-1-HTML-CSS/1.2/1
 
 HTML 提供了一个链接标签 //<a>// 给文章添加标签链接。 //<a>// 是一个内联标签，用户点击后，浏览器会跳转到指定网址。
 
-![img](https://document.youkeda.com/P3-1-HTML-CSS/1.3/12.png)
+![img](https://document.xxx.com/P3-1-HTML-CSS/1.3/12.png)
 
 对于//<a>// 标签，不仅可以放置文字，也可以放置其他元素，比如段落，图像，多媒体等。
 
-![img](https://document.youkeda.com/P3-1-HTML-CSS/1.3/14.png)
+![img](https://document.xxx.com/P3-1-HTML-CSS/1.3/14.png)
 
 ### 标签属性：
 
 * **href** herf 属性是给出链接指向的网址，他的值一般是一个 URl 或者是一个锚点。
 * **title** title 属性给出链接的说明信息。鼠标悬停在链接上方，浏览器会将这个属性的值，以提示块的形式显示出来。
-* **target** taget 属性指向如何展示打开的链接。target 属性的值也可以是“self”, "blank", "parent", "top" 四个关键词之一。![img](https://document.youkeda.com/P3-1-HTML-CSS/1.3/19.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+* **target** taget 属性指向如何展示打开的链接。target 属性的值也可以是“self”, "blank", "parent", "top" 四个关键词之一。![img](https://document.xxx.com/P3-1-HTML-CSS/1.3/19.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 对于_self标签，其描述链接为在本基础上打开。
 
@@ -120,13 +120,13 @@ HTML 提供了无序列表标签//<ul>//和有序列表标签//<ol>//
 
 ### 对于无序列表：
 
-![img](https://document.youkeda.com/P3-1-HTML-CSS/1.3/20.png)
+![img](https://document.xxx.com/P3-1-HTML-CSS/1.3/20.png)
 
 使用//<ul> .... </ul>// 经行连接。
 
 ### 对于有序列表：
 
-![img](https://document.youkeda.com/P3-1-HTML-CSS/1.3/21.png)
+![img](https://document.xxx.com/P3-1-HTML-CSS/1.3/21.png)
 
 使用//<ol>...</ol>// 经行连接
 
@@ -283,7 +283,7 @@ HTML 提供了无序列表标签//<ul>//和有序列表标签//<ol>//
 
 ![image-20250519125540163](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250519125540163.png)
 
-对于某种情况：我们给用户提供几个固定选项，因为实际问题可以产生很多选项，属于我们不采用单选框，而是应用新标签 // <select> // 和 // <option> // 选项菜单。![img](https://document.youkeda.com/P3-1-HTML-CSS/1.4/6.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+对于某种情况：我们给用户提供几个固定选项，因为实际问题可以产生很多选项，属于我们不采用单选框，而是应用新标签 // <select> // 和 // <option> // 选项菜单。![img](https://document.xxx.com/P3-1-HTML-CSS/1.4/6.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 ```html
 <select name="career">
@@ -354,7 +354,7 @@ HTML 提供了无序列表标签//<ul>//和有序列表标签//<ol>//
 </form>
 ```
 
-![img](https://document.youkeda.com/P3-1-HTML-CSS/1.4/9.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://document.xxx.com/P3-1-HTML-CSS/1.4/9.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 ## HTML内部添加样式：
 
@@ -414,12 +414,12 @@ HTML 提供了无序列表标签//<ul>//和有序列表标签//<ol>//
 设置格式：font-weight:100
 
 ```html
-<p style="font-weight: 200;">优课达--学的比别人好一点～</p>
-<p style="font-weight: lighter;">优课达--学的比别人好一点～</p>
-<p style="font-weight: 400;">优课达--学的比别人好一点～</p>
-<p style="font-weight: normal;">优课达--学的比别人好一点～</p>
-<p style="font-weight: 700;">优课达--学的比别人好一点～</p>
-<p style="font-weight: bold;">优课达--学的比别人好一点～</p>
+<p style="font-weight: 200;">xxx--学的比别人好一点～</p>
+<p style="font-weight: lighter;">xxx--学的比别人好一点～</p>
+<p style="font-weight: 400;">xxx--学的比别人好一点～</p>
+<p style="font-weight: normal;">xxx--学的比别人好一点～</p>
+<p style="font-weight: 700;">xxx--学的比别人好一点～</p>
+<p style="font-weight: bold;">xxx--学的比别人好一点～</p>
 ```
 
 #### 字体颜色：
@@ -729,7 +729,7 @@ id选择器  > 类选选选择器 > 标签选择器
 
 这些标签有一个共同属性们就是独占一行
 
-**div** 标签是一个干净透彻的矩形![img](https://style.youkeda.com/img/ham/course/f1/boxmodel.jpeg?x-oss-process=image/resize,w_655/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_ne,x_10,y_10):
+**div** 标签是一个干净透彻的矩形![img](https://style.xxx.com/img/ham/course/f1/boxmodel.jpeg?x-oss-process=image/resize,w_655/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_ne,x_10,y_10):
 
 由四部分组成
 
@@ -738,7 +738,7 @@ id选择器  > 类选选选择器 > 标签选择器
 * 边框 border
 * 外边框 margin
 
-![img](https://style.youkeda.com/img/ham/course/f1/boxsample.png?x-oss-process=image/resize,w_1024/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://style.xxx.com/img/ham/course/f1/boxsample.png?x-oss-process=image/resize,w_1024/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 ## 内容区：content
 
@@ -1321,19 +1321,19 @@ word-spacing 属性就是单词与单词之间的距离，这里将这个距离�
         <img
           alt=""
           class="first"
-          src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/1.jpg?x-oss-process=image/resize,h_300"
+          src="https://document.xxx.com/P3-1-HTML-CSS/1.8/1.jpg?x-oss-process=image/resize,h_300"
         />
         <img 
           alt=""
-          src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/2.jpg?x-oss-process=image/resize,h_300"
+          src="https://document.xxx.com/P3-1-HTML-CSS/1.8/2.jpg?x-oss-process=image/resize,h_300"
         />
         <img
           alt=""
-          src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/3.jpg?x-oss-process=image/resize,h_300"
+          src="https://document.xxx.com/P3-1-HTML-CSS/1.8/3.jpg?x-oss-process=image/resize,h_300"
          />
         <img
           alt=""
-          src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/4.jpg?x-oss-process=image/resize,h_300"
+          src="https://document.xxx.com/P3-1-HTML-CSS/1.8/4.jpg?x-oss-process=image/resize,h_300"
          />
     </div>
     <h2> LISTEN </h2>
@@ -1477,7 +1477,7 @@ h1 {
 > 
 > 固定定位不为元素预留空间，而是通过指定元素相对于屏幕视口的位置来指定元素位置，元素的位置在屏幕滚动时不会改变
 
-在滚动时，会有固定标签内容被其他模块遮挡的情况：![img](http://document.youkeda.com/P3-1-HTML-CSS/1.8/4-fixed/2.jpeg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+在滚动时，会有固定标签内容被其他模块遮挡的情况：![img](http://document.xxx.com/P3-1-HTML-CSS/1.8/4-fixed/2.jpeg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 着需要 **z-index** 来解决
 
@@ -1518,11 +1518,11 @@ h1 {
 }
 ```
 
-sticky 是一个新标签，有很多应用场景：![img](https://document.youkeda.com/P3-1-HTML-CSS/1.8/6-sticky/2.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+sticky 是一个新标签，有很多应用场景：![img](https://document.xxx.com/P3-1-HTML-CSS/1.8/6-sticky/2.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
-![img](https://document.youkeda.com/P3-1-HTML-CSS/1.8/6-sticky/3.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://document.xxx.com/P3-1-HTML-CSS/1.8/6-sticky/3.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
-![img](https://document.youkeda.com/P3-1-HTML-CSS/1.8/6-sticky/4.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://document.xxx.com/P3-1-HTML-CSS/1.8/6-sticky/4.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 ## Float：
 
@@ -1545,16 +1545,16 @@ sticky 是一个新标签，有很多应用场景：![img](https://document.youk
         <nav></nav>
         <main>
             <img
-                 src= src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/1.jpg?x-oss-process=image/resize,h_500"
+                 src= src="https://document.xxx.com/P3-1-HTML-CSS/1.8/1.jpg?x-oss-process=image/resize,h_500"
       />
       <img
-        src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/2.jpg?x-oss-process=image/resize,h_500"
+        src="https://document.xxx.com/P3-1-HTML-CSS/1.8/2.jpg?x-oss-process=image/resize,h_500"
       />
       <img
-        src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/3.jpg?x-oss-process=image/resize,h_500"
+        src="https://document.xxx.com/P3-1-HTML-CSS/1.8/3.jpg?x-oss-process=image/resize,h_500"
       />
       <img
-        src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/4.jpg?x-oss-process=image/resize,h_500"
+        src="https://document.xxx.com/P3-1-HTML-CSS/1.8/4.jpg?x-oss-process=image/resize,h_500"
       />
         </main>
     </body>
@@ -1599,7 +1599,7 @@ main {
 <nsv class="nav">
     <img
          class="logo"
-         src="https://style.youkeda.com/img/ykd-components/logo.png"
+         src="https://style.xxx.com/img/xxx-components/logo.png"
      />
     <img
          class="avatar"
@@ -1624,7 +1624,7 @@ main {
 
 ![image-20250608151900032](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250608151900032.png)
 
-已经创建了头部元素，怎么使得ykd图标靠左，头像靠右？
+已经创建了头部元素，怎么使得xxx图标靠左，头像靠右？
 
 **float**——中文意思为 **浮动** 其有两个基本属性：
 
@@ -1646,7 +1646,7 @@ main {
 
 ## 模态框：
 
-来看一下模态框的例子![image.png](https://document.youkeda.com/P3-1-HTML-CSS/1.9/combat-1-modal/1.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)![image.png](https://document.youkeda.com/P3-1-HTML-CSS/1.9/combat-1-modal/2.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)![image.png](https://document.youkeda.com/P3-1-HTML-CSS/1.9/combat-1-modal/3.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+来看一下模态框的例子![image.png](https://document.xxx.com/P3-1-HTML-CSS/1.9/combat-1-modal/1.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)![image.png](https://document.xxx.com/P3-1-HTML-CSS/1.9/combat-1-modal/2.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)![image.png](https://document.xxx.com/P3-1-HTML-CSS/1.9/combat-1-modal/3.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 > 1. 模态框总是在浏览器的中间，浏览器随意的放大缩小，模态框还是在浏览器中间，
 > 2. 模态框总是有一个半透明的背景
@@ -1655,7 +1655,7 @@ main {
 
 我们继续开发在 float 案例，建立一个模态框
 
-![img](https://document.youkeda.com/P3-1-HTML-CSS/1.9/combat-1-modal/4.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://document.xxx.com/P3-1-HTML-CSS/1.9/combat-1-modal/4.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 之前的代码：
 
@@ -1668,7 +1668,7 @@ main {
     <nav class="nav">
         <img
       class="logo"
-      src="https://style.youkeda.com/img/ykd-components/logo.png"
+      src="https://style.xxx.com/img/xxx-components/logo.png"
     />
     <img
       class="avatar"
@@ -1677,16 +1677,16 @@ main {
     </nav>
     <main>
         <img
-      src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/1.jpg?x-oss-process=image/resize,h_500"
+      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/1.jpg?x-oss-process=image/resize,h_500"
     />
     <img
-      src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/2.jpg?x-oss-process=image/resize,h_500"
+      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/2.jpg?x-oss-process=image/resize,h_500"
     />
     <img
-      src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/3.jpg?x-oss-process=image/resize,h_500"
+      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/3.jpg?x-oss-process=image/resize,h_500"
     />
     <img
-      src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/4.jpg?x-oss-process=image/resize,h_500"
+      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/4.jpg?x-oss-process=image/resize,h_500"
     />
     </main>
 </body>
@@ -1787,7 +1787,7 @@ main {
   </main>
   <div class="mask"></div>
   <div class="modal">
-    <img src="https://style.youkeda.com/img/ykd-components/logo.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10" />
+    <img src="https://style.xxx.com/img/xxx-components/logo.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10" />
   </div>
 </body>
 ```
@@ -1883,16 +1883,16 @@ main {
   </nav>
   <main>
     <img
-      src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/1.jpg?x-oss-process=image/resize,h_500"
+      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/1.jpg?x-oss-process=image/resize,h_500"
     />
     <img
-      src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/2.jpg?x-oss-process=image/resize,h_500"
+      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/2.jpg?x-oss-process=image/resize,h_500"
     />
     <img
-      src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/3.jpg?x-oss-process=image/resize,h_500"
+      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/3.jpg?x-oss-process=image/resize,h_500"
     />
     <img
-      src="https://document.youkeda.com/P3-1-HTML-CSS/1.8/4.jpg?x-oss-process=image/resize,h_500"
+      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/4.jpg?x-oss-process=image/resize,h_500"
     />
   </main>
 
@@ -1935,9 +1935,9 @@ nav {
 
 ### 第一步：完成搜索框：
 
-![img](https://document.youkeda.com/P3-1-HTML-CSS/1.9/combat-2-search/2.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://document.xxx.com/P3-1-HTML-CSS/1.9/combat-2-search/2.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
-在效果图中，ykd 靠左，搜索框和头像靠右，通过第二节的学习，我们知道可以用 float 来实现。在这里，我们需要把右侧的输入框和头像整体包裹起来，实现靠右效果，我们来看 HTML 代码：
+在效果图中，xxx 靠左，搜索框和头像靠右，通过第二节的学习，我们知道可以用 float 来实现。在这里，我们需要把右侧的输入框和头像整体包裹起来，实现靠右效果，我们来看 HTML 代码：
 
 ```html
 <nav class="nav">
@@ -1945,7 +1945,7 @@ nav {
         <div class="serach">
             <input placeholder="搜你想搜的东西" />
             <img
-                 src="///style.youkeda.com/img/ykd-components/search.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10"
+                 src="///style.xxx.com/img/xxx-components/search.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10"
       />"
         </div>
         <img
@@ -2016,7 +2016,7 @@ nav {
 }
 ```
 
-![img](https://document.youkeda.com/P3-1-HTML-CSS/1.9/combat-2-search/4.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://document.xxx.com/P3-1-HTML-CSS/1.9/combat-2-search/4.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 * 搜索结果宽度和头部搜索框的宽度是一致的
 * 搜索结果脱离文档流，是浮在所有元素上面的
@@ -2110,7 +2110,7 @@ background: rgba(0, 0, 0, 0.5);
 
 eg：
 
-![img](http://document.youkeda.com/P3-1-HTML-CSS/1.10/1-gradient/1.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](http://document.xxx.com/P3-1-HTML-CSS/1.10/1-gradient/1.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 ```css
 左边的色值:   #95CA47
@@ -2147,7 +2147,7 @@ eg：
 }
 ```
 
-![img](http://document.youkeda.com/P3-1-HTML-CSS/1.10/1-gradient/2.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](http://document.xxx.com/P3-1-HTML-CSS/1.10/1-gradient/2.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 在图中，我们看见已近有了**边框，阴影，圆角**效果，文字因为是白色所有看不出来，下面我们需要给按钮加入渐变背景色
 
@@ -2175,7 +2175,7 @@ eg：
 
 渐变不一定是从开始到结束，我们可以设置各种中间状态。例如从 30% - 70% 的渐变
 
-![img](http://document.youkeda.com/P3-1-HTML-CSS/1.10/1-gradient/4.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](http://document.xxx.com/P3-1-HTML-CSS/1.10/1-gradient/4.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 使用：
 
@@ -2199,7 +2199,7 @@ css 除了设置背景颜色，还可以设置背景图片，背景图片在网�
 
 ![image-20250630125857224](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250630125857224.png)
 
-> 一个容器中，有一串 HELLO WORLD 文字，同时有一张居中的 ykd LOGO 的背景。
+> 一个容器中，有一串 HELLO WORLD 文字，同时有一张居中的 xxx LOGO 的背景。
 
 我们继续来看下面的 HTML 代码
 
@@ -2268,7 +2268,7 @@ css 除了设置背景颜色，还可以设置背景图片，背景图片在网�
     font-weight: bold;
     color: yellowgreen;
 
-    background-image: url(https://style.youkeda.com/img/ykd-components/logo.png)
+    background-image: url(https://style.xxx.com/img/xxx-components/logo.png)
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -2337,4 +2337,4 @@ position-clip:  https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip
 
 ## qq注册页：
 
-对于 qq 注册页的头部开发：![img](https://document.youkeda.com/P3-1-HTML-CSS/1.11/demo.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+对于 qq 注册页的头部开发：![img](https://document.xxx.com/P3-1-HTML-CSS/1.11/demo.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)

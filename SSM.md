@@ -356,9 +356,9 @@ public interface UserDAO {
 > 现在使用 controller 进行测试
 
 ```java
-package com.youkeda.comment.control;
+package com.xxx.comment.control;
 
-import com.youkeda.comment.dao.UserDAO;
+import com.xxx.comment.dao.UserDAO;
 import UserDO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -613,9 +613,9 @@ public interface UserDO {
 
 ### API 测试
 ```java
-package com.youkeda.comment.control;
+package com.xxx.comment.control;
 
-import com.youkeda.comment.dao.UserDAO;
+import com.xxx.comment.dao.UserDAO;
 import UserDO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -831,9 +831,9 @@ public interface UserDAO {
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.youkeda.comment.dao.UserDAO">
+<mapper namespace="com.xxx.comment.dao.UserDAO">
 
- <resultMap id="userResultMap" type="com.youkeda.comment.dataobject.UserDO">
+ <resultMap id="userResultMap" type="com.xxx.comment.dataobject.UserDO">
     <id column="id" property="id"/>
     <result column="user_name" property="userName"/>
     <result column="pwd" property="pwd"/>
@@ -983,9 +983,9 @@ XML文件：
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.youkeda.comment.dao.UserDAO">
+<mapper namespace="com.xxx.comment.dao.UserDAO">
 
-    <resultMap id="userResultMap" type="com.youkeda.comment.dataobject.UserDO">
+    <resultMap id="userResultMap" type="com.xxx.comment.dataobject.UserDO">
         <id column="id" property="id"/>
         <result column="user_name" property="userName"/>
         <result column="pwd" property="pwd"/>
@@ -995,12 +995,12 @@ XML文件：
         <result column="gmt_modified" property="gmtModified"/>
     </resultMap>
 
-    <insert id="add" parameterType="com.youkeda.comment.dataobject.UserDO" useGeneratedKeys="true" keyProperty="id">
+    <insert id="add" parameterType="com.xxx.comment.dataobject.UserDO" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO user (user_name, pwd, nick_name,avatar,gmt_created,gmt_modified)
         VALUES(#{userName}, #{pwd}, #{nickName}, #{avatar},now(),now())
     </insert>
 
-    <update id="update" parameterType="com.youkeda.comment.dataobject.UserDO">
+    <update id="update" parameterType="com.xxx.comment.dataobject.UserDO">
         update user set nick_name=#{nickName},gmt_modified=now() where id=#{id}
     </update>
 
@@ -1255,8 +1255,8 @@ package com.xxx.comment.contril;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.youkeda.comment.dao.UserDAO;
-import com.youkeda.comment.dataobject.UserDO;
+import com.xxx.comment.dao.UserDAO;
+import com.xxx.comment.dataobject.UserDO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
@@ -1345,9 +1345,9 @@ package com.xxx.comment.control;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.youkeda.comment.dao.UserDAO;
-import com.youkeda.comment.dataobject.UserDO;
-import com.youkeda.comment.model.Paging;
+import com.xxx.comment.dao.UserDAO;
+import com.xxx.comment.dataobject.UserDO;
+import com.xxx.comment.model.Paging;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;

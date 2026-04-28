@@ -289,7 +289,7 @@ pupils.stream()
 数据流的操作过程，可以看成一个管道，管道有多个节点构成，每个节点完成一个操作。   
 数据输入这个管道，按照 顺序 经过各个节点。最后输出成为 console。  
 
-![数据流示意图](E:/project/ykd/Concurrent_Coding/image/j5-2-4-1.svg)
+![数据流示意图](E:/project/xxx/Concurrent_Coding/image/j5-2-4-1.svg)
 
 .filter().forEach() 组成了一个管道，每个方法都是一个管道的节点。方法调用的顺序构成了管道节点的顺序。  
 
@@ -312,7 +312,7 @@ numbers.stream()
 
 这里用到的是 map() 方法。  
 
-![map流程示意图](E:/project/ykd/Concurrent_Coding/image/image.png)
+![map流程示意图](E:/project/xxx/Concurrent_Coding/image/image.png)
 
 数据流 -> map(映射数据 —> 源数据 ....)  数据流->  
 
@@ -389,7 +389,7 @@ limit() 方法返回的是流前 n 个数据 当然 你不能为负数。
 
 Stream 的这种变化特征是： 函数式风格。即弱化了对象的严格，完整的语法，重心变成了通过函数完成数据计算。  
 
-![函数式编程](E:/project/ykd/Concurrent_Coding/image/image1.png)
+![函数式编程](E:/project/xxx/Concurrent_Coding/image/image1.png)
 
 数据集 -> 数据流 -> 数据计算  
 
@@ -521,7 +521,7 @@ Collectors.toList() 是一个静态方法，作为参数告诉 collect() 方法�
 使用并行流的代码很简单，不再调用 stream() 方法，改为调用 parallelStream() 方法即可。其它的计算方法是一样的。
 
 parallelStream() 以并行的方式执行任务,同时也支持流的收集，合并等计算。结合下图理解与串行运算的不同：  
-![并行流示意图](E:/project/ykd/Concurrent_Coding/image/image2.png)
+![并行流示意图](E:/project/xxx/Concurrent_Coding/image/image2.png)
 
 ### 不适合使用并行计算的场景
 
@@ -674,7 +674,7 @@ public class 甜品店 {
 2. 把生产实例对象的过程，收拢到工厂类实现。
 
 如图：  
-![简单工厂模式图](E:/project/ykd/Concurrent_Coding/image/image3.png)
+![简单工厂模式图](E:/project/xxx/Concurrent_Coding/image/image3.png)
 
 FruitFactory(Fruit getFruit(Customer customer)) --> Customer   
 Fruit <--|   
@@ -717,7 +717,7 @@ public void setBrand(String brand) {
 这样违背了简约代码的基本原则
 
 我们可以通过简单工厂模式进行设计  
-![简单工厂模式](E:/project/ykd/Concurrent_Coding/image/image4.png)
+![简单工厂模式](E:/project/xxx/Concurrent_Coding/image/image4.png)
 
 接口 car 与实现类之间，加上一个 AbstractCar ,轿车类不再直接实现接口，而是继承 AbstractCar.
 
@@ -738,7 +738,7 @@ public class 餐馆 {
 ###  解决方法
 对于一批，多种类型的对象需要创建的场景，使用抽象工厂模式会更好。  
 简单工厂的主要把多个产品抽象，使用一个工厂统一创建；那么抽象工厂的主要作用就是把多个工厂也进一步进行抽象。  
-![抽象工厂模式](E:/project/ykd/Concurrent_Coding/image/image5.png)
+![抽象工厂模式](E:/project/xxx/Concurrent_Coding/image/image5.png)
 
 实际上就是进一步抽象出来了工厂接口（SnacksFactory），然后多出了一个 SnacksFactoryBuilder
 
@@ -971,7 +971,7 @@ public class WeaterTest {
 ### 总结  
 这里主要学会使用 Observable 父类和 Observer 接口提供的几个方法。
 
-![观察者模式](E:/project/ykd/Concurrent_Coding/image/image6.png)
+![观察者模式](E:/project/xxx/Concurrent_Coding/image/image6.png)
 
 这个与工厂模式的思想相同的是，观察者模式让 **观察者** 和 **被观察者** 双方的耦合度降低
 > 观察者不需要知道数据变化后需要通知给谁，发出通知即可；而且不需要知道谁收到了通知
@@ -1027,7 +1027,7 @@ public class Bank {
 }
 ```
 类图：  
-![类图](E:/project/ykd/Concurrent_Coding/image/image7.png)  
+![类图](E:/project/xxx/Concurrent_Coding/image/image7.png)  
 
 Thread 父类中有 name 属性，但是 private ，所以可以调用 setName() 方法来设置线程名称，通过 getName() 方法为线程设置名字，通过 getName() 就知道是哪个线程在运行。
 > 当然，根据具体的需求，线程类也可以增加更多其他属性。只要不遗漏 run() 方法。
@@ -1094,7 +1094,7 @@ public class Blank {
 
 Thread 实例 (new Thread(person1)) 相当于调度器，触发线程任务执行，线程里面的实例 (new Person()) 就相当于任务。任务是不能自己启动的，需要被调度。  
  通过类图进行理解:
- ![类图](E:/project/ykd/Concurrent_Coding/image/imag8e.png)
+ ![类图](E:/project/xxx/Concurrent_Coding/image/imag8e.png)
 
  ## 线程安全
 
@@ -1173,7 +1173,7 @@ Thread.currentThread() 返回的是当前正在运行的线程实例对象，因
 
 ### 问题分析
 前面章节知道， 线程的调用机制是很复杂的，是可以同时执行的，特别是多核 CPU 的情况下，多个进程同时（并行）执行的概率会很高。  
-![并行理解图](E:/project/ykd/Concurrent_Coding/image/image9.png)
+![并行理解图](E:/project/xxx/Concurrent_Coding/image/image9.png)
 
 这种 **多线程** 运行 **同一个实例对象**（ticket）的情况下，**修改了同一个变量**（调用 sell() 方法同时执行 count-- 语句），后果是不可预料的所以会打出余量错乱甚至相同的情况。  
 
@@ -1191,7 +1191,7 @@ public class Ticket {
 ```
 
 synchronized 也叫做**同步锁**, 表示此方法是锁定的，同一时刻只能由一个线程执行此方法。  
-![同步锁示意图](E:/project/ykd/Concurrent_Coding/image/image10.png)
+![同步锁示意图](E:/project/xxx/Concurrent_Coding/image/image10.png)
 
 先判断 sell() 方法有没有被上锁：
 * 如果上锁，说明有其他线程正在调用 sell() 方法，必须等待其他线程对 sell() 方法调用结束后才能执行 sell() 方法；
@@ -1246,7 +1246,7 @@ public class StudentIDTest {
 > new Thread(register) 意味着一个线程对象只能执行一个任务，而线程池让线程与任务分离，不再紧密绑定。  
 
 线程池的另外一个重要的概念是，线程池并不是无限大的（因为计算机的 CPU，内存等资源毕竟有限） 所以线程池中存在的线程数也是有限的，这就意味着能同时运行的任务数是有限的，其它过剩的任务就需要**排队**。 待任务完成，有空闲线程后，才执行继续的任务。
-![线程池](ykd/Concurrent_Coding/image/image15.png)
+![线程池](xxx/Concurrent_Coding/image/image15.png)
 
 ### 线程池创建
 线程池核心代码：

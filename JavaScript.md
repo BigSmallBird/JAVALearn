@@ -689,7 +689,7 @@ JavaScript 的 for 循环与 java c 的很相似。
 
 ### for循环的写法:
 
-![img](https://document.youkeda.com/P3-4-HTML-CSS/5/1.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://document.xxx.com/P3-4-HTML-CSS/5/1.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 ### for...in 与 for...of 的写法：
 
@@ -723,7 +723,7 @@ for (let item of p){
 
 在  js  里面支持 while 循环与 do...while，
 
-![img](https://document.youkeda.com/P3-4-HTML-CSS/5/2.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://document.xxx.com/P3-4-HTML-CSS/5/2.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 > 注意： **初始条件写在 while 外面，更新条件写在  while  里面**
 
@@ -737,7 +737,7 @@ while (i < peppaFriends.length ) {
 }
 ```
 
-![img](https://document.youkeda.com/P3-4-HTML-CSS/5/5.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://document.xxx.com/P3-4-HTML-CSS/5/5.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 ```js
 let i = 0;
@@ -835,7 +835,7 @@ function print(){
 }
 ```
 
-![img](https://document.youkeda.com/P3-4-HTML-CSS/6/1.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://document.xxx.com/P3-4-HTML-CSS/6/1.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 1. 关键词“function”
 2. 函数名“print” 
@@ -852,7 +852,7 @@ let print = function() {
 };
 ```
 
-![img](https://document.youkeda.com/P3-4-HTML-CSS/6/2.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://document.xxx.com/P3-4-HTML-CSS/6/2.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 或者：
 
@@ -955,7 +955,7 @@ setTimeout 函数用来指定某个函数或者某段代码，在多少ms后执�
 
 setTimeout 函数的语法：
 
-![img](https://document.youkeda.com/P3-4-HTML-CSS/6/3.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://document.xxx.com/P3-4-HTML-CSS/6/3.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 ```JavaScript
 let timeId = setTimeout(func | code, delay);
@@ -1040,7 +1040,7 @@ conut();
 
 下面我们来看 setInterval ，它的用法与 setTimeout 完全一致，区别是 setInterval 指定某个任务每隔一段时间就执行一次，也就是无限的定时执行
 
-![img](https://document.youkeda.com/P3-4-HTML-CSS/6/4.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://document.xxx.com/P3-4-HTML-CSS/6/4.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 ```JavaScript
 let timerId = setInterval(func|code, delay);
@@ -1078,7 +1078,7 @@ function print() {
 
 对象简单来说，是一组“键值对” （key - value） 的集合，是一种无序的符合数据集合：
 
-![img](https://document.youkeda.com/P3-4-HTML-CSS/7/1.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://document.xxx.com/P3-4-HTML-CSS/7/1.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 * 大括号：定义一个对象；
 * person：定义的对象被复制给 person，则 person 将指向这个对象；
@@ -1569,10 +1569,10 @@ console.log(trimestr.length);
 
 如果要截取一个字符串中的一部分，可以使用或者 substr。
 
-比如我们现在有一个 URL https://www.youkeda.com/userhome#collect，要求截取其中的 # 之后的内容：
+比如我们现在有一个 URL https://www.xxx.com/userhome#collect，要求截取其中的 # 之后的内容：
 
 ```JavaScript
-let url = 'https://www.youkeda.com/userhome#collect';
+let url = 'https://www.xxx.com/userhome#collect';
 
 const index = url.indexOf('#') + 1;
 
@@ -1904,7 +1904,7 @@ console.log(dt);
 * history （历史）：screen 包含我们显示屏幕的信息，这个是硬件信息
 * location （地址）：location 包含当前访问的地址信息
 
-![img](https://style.youkeda.com/img/course/f4/8/1.jpeg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![img](https://style.xxx.com/img/course/f4/8/1.jpeg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
 
 **特别：**
 
@@ -1924,7 +1924,7 @@ console.log(dt);
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>ykd</title>
+        <title>xxx</title>
     </head>
     <body>
         <h1>
@@ -1950,8 +1950,8 @@ window 对象里面，有很多方法，比如 alert，confirm等等。资料库
 eg：
 
 ```JavaScript
-console.log('ykd');
-window.console.log('ykd');
+console.log('xxx');
+window.console.log('xxx');
 
 console.log(navigator);
 console.log(wiindow.navigator);
@@ -2118,13 +2118,13 @@ window.document 也就是整个 HTML 的内容
 <body>
   <nav class="nav">
     <a class="qq">
-      <img src="https://document.youkeda.com/P3-1-HTML-CSS/1.9/3-qq/qq.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10" />
+      <img src="https://document.xxx.com/P3-1-HTML-CSS/1.9/3-qq/qq.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10" />
       <span>QQ</span>
     </a>
     <ul class="right">
       <li class="bright">
         <img
-          src="https://document.youkeda.com/P3-1-HTML-CSS/1.9/3-qq/bright.png"
+          src="https://document.xxx.com/P3-1-HTML-CSS/1.9/3-qq/bright.png"
           alt="QQ靓号"
         />
       </li>
@@ -2132,7 +2132,7 @@ window.document 也就是整个 HTML 的内容
         <span>简体中文</span>
         <img
           class="arrow"
-          src="https://document.youkeda.com/P3-1-HTML-CSS/1.9/3-qq/arrow-down.png"
+          src="https://document.xxx.com/P3-1-HTML-CSS/1.9/3-qq/arrow-down.png"
         />
       </li>
       <li class="contact">意见反馈</li>
@@ -2282,11 +2282,11 @@ querySelector 和 querySelectorAll 是最新提出的方法，在这两个方法
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8" />
-    <title>ykd</title>
+    <title>xxx</title>
 </head>
 <body>
     <div id='test'>
-        ykd
+        xxx
     </div>
     <script src="./index.js"></script>
 </body>
@@ -2298,7 +2298,7 @@ JS 代码如下：
 let divDom = document.querySelector('div#test');
 console.log(divDom.nodeType, divDom.nodeName, divDom.nodeValue);
 
-//获取 DIV 节点的第一个儿子节点，代表'ykd'这个字符串
+//获取 DIV 节点的第一个儿子节点，代表'xxx'这个字符串
 let txtDom = divDom.firstChild;
 console.log(txtDom.nodeType, txtDom.nodeName, txtDom.nodeValue);
 
@@ -2321,13 +2321,13 @@ console.log(attDom.nodeType, attDom.nodeName, attDom.nodeValue);
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8" />
-    <tile>ykd</tile>
+    <tile>xxx</tile>
 </head>
 <body>
     <div id="test">
-        ykd
+        xxx
         <p>
-            ykd
+            xxx
         </p>
         <p>
             sss
@@ -2369,10 +2369,10 @@ console.log(divDom.parentNode);
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8" />
-    <title>ykd</title>
+    <title>xxx</title>
 </head>
 <body>
-     <h1 class="test youkeda" style="color: #FF3300; font-size: 24px;">优课达</h1>
+     <h1 class="test xxx" style="color: #FF3300; font-size: 24px;">xxx</h1>
   <script src="./index.js"></script>
 </body>
 ```
@@ -2388,7 +2388,7 @@ console.log(h1Dom.style.color);
 
 | 属性        | 类型                  | 值                       | 总结                          |
 |:---------:| ------------------- | ----------------------- | --------------------------- |
-| classList | DOMTokenList        | ['test', 'youkeda']     | classList数组方式存储所有的 class 名称 |
+| classList | DOMTokenList        | ['test', 'xxx']     | classList数组方式存储所有的 class 名称 |
 | style     | CSSStyleDeclaration | color属性为rgb(255, 51, 0) | 对象或字典的方法存储 CSSStyle         |
 
 #### DOM 数据属性：
@@ -2401,7 +2401,7 @@ console.log(h1Dom.style.color);
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8" />
-    <title>ykd</title>
+    <title>xxx</title>
 </head>
 <body>
     <article data-parts="3" data-words="1314" data-category="python">...</article>
@@ -2449,13 +2449,13 @@ console.log(article.dataset);
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="./post.css" />
-    <title>ykd</title>
+    <title>xxx</title>
 </head>
 <body>
     <section class="box">
         <img
              class="java"
-             src="https://document.youkeda.com/new-learn-path/Bitmap.png" />
+             src="https://document.xxx.com/new-learn-path/Bitmap.png" />
         <div class="title">
             java
         </div>
@@ -2494,7 +2494,7 @@ box.addEnentListener('click', function() {
     if (isSelected) {
         const img = document.createElement('img');
 
-        img.src = 'https://style.youkeda.com/img/sandwich/check.png';
+        img.src = 'https://style.xxx.com/img/sandwich/check.png';
         img.setAttribute('style', 'width : 100%; height : 100%');
 
         //将这个节点添加到select里面：
@@ -2523,14 +2523,14 @@ const div = document.createElement('div');
 
 ```js
 const div = document.createElement('div');
-const txt = document.createTextNode('不学ykd')；
+const txt = document.createTextNode('不学xxx')；
 ```
 
 我们继续吧 txt 添加到 div 里面，把 div 添加到 body 里面：
 
 ```js
 const div = documment.createElement('div');
-const txt = document.createTextNode('不学ykd');
+const txt = document.createTextNode('不学xxx');
 
 div.appendChild(txt);
 document.body.appendChild(div);
@@ -2554,7 +2554,7 @@ inserBefore(newNode, referenceNode), 需要两个参数，newNode 表示新的�
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8" />
-    <title>ykd</title>
+    <title>xxx</title>
 </head>
 <body>
     <ul class="root">
@@ -2939,14 +2939,14 @@ moreBtn,addEventListener('click', function() {
 
 ### 冒泡：
 
-在上次的工程上面。我们想在整个模板上面添加点击事件，跳转到对应的工程详情页面（这里我们使用 ykd 的 url 代替）：
+在上次的工程上面。我们想在整个模板上面添加点击事件，跳转到对应的工程详情页面（这里我们使用 xxx 的 url 代替）：
 
 我们在 JS 中对面板点击事件增加点击事件，代码：
 
 ```js
 const workspace = document.querySelector('.workspace');
 workspace.addEventListener('click', function() {
-    window.location.href = 'https://www.youkeda.com';
+    window.location.href = 'https://www.xxx.com';
 });
 ```
 
@@ -3117,7 +3117,7 @@ window.addEventListener('scorll', () => {
            <img 
            class="first"
            alt=""
-           src="http://document.youkeda.com/p3-1-HTML-CSS/1.8/1.jpg?x-oss-process=image/resize,h_300"
+           src="http://document.xxx.com/p3-1-HTML-CSS/1.8/1.jpg?x-oss-process=image/resize,h_300"
            />
            `
        }
@@ -3203,11 +3203,11 @@ API（Application Programming Innterface）应用程序接口，API 一般是指
 
 API：可以快速访问某个程序
 
-这个在计算机里面也可以叫做接口。我们生活里面也有很多接口，比如 U 盘可以储存信息，我们访问 U 盘，只需要把 U 盘接入电脑就可以访问，插入 USB 接口就是一个接口。我们不需要关心它是如何实现的。API：[文档](https://ham.youkeda.com/articles/detail/5f3756bd5e205f30b2c2b125)
+这个在计算机里面也可以叫做接口。我们生活里面也有很多接口，比如 U 盘可以储存信息，我们访问 U 盘，只需要把 U 盘接入电脑就可以访问，插入 USB 接口就是一个接口。我们不需要关心它是如何实现的。API：[文档](https://ham.xxx.com/articles/detail/5f3756bd5e205f30b2c2b125)
 
 ### fetch 调用 API ：
 
-我们知道一个显示ykd公司信息的 API 是：https://mock.youkeda.com/api/m/f4-11-1-1
+我们知道一个显示xxx公司信息的 API 是：https://mock.xxx.com/api/m/f4-11-1-1
 
 把这个粘贴到浏览器，可以查询到返回结果：
 
@@ -3217,7 +3217,7 @@ API：可以快速访问某个程序
 
 ```js
 {
-  "company": "优课达",
+  "company": "xxx",
   "slogan": "学的比别人好一点"
 }
 ```
@@ -3253,7 +3253,7 @@ oReq.addEventListener('load', function () {
 });
 oReq.open(
     'GET',
-    'https://mock.youkeda.com/api/m/f4-11-1-1'
+    'https://mock.xxx.com/api/m/f4-11-1-1'
 );
 oPeq.send();
 ```
@@ -3275,7 +3275,7 @@ oPeq.send();
 很多情况下，API 调用需要参数。
 
 ```api
-https://mock.youkeda.com/api/m/reply?mood=happy
+https://mock.xxx.com/api/m/reply?mood=happy
 ```
 
 我们只要把包含参数的 完整 的 API 直接传入
@@ -3293,7 +3293,7 @@ js 是如何提交 POST 请求？
 在服务器端提供了一个登录接口，接口地址为：
 
 ```js
-https://mock.youkeda.com/api/m/f4-11-4-1
+https://mock.xxx.com/api/m/f4-11-4-1
 ```
 
 fetch 是默认发起 GET 请求的，我们看文档：https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch

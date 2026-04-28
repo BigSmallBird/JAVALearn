@@ -14,7 +14,7 @@ Maven 是一个 **项目管理和构建自动化工具** 。但实际对于我�
 
 ### Maven 系统架构：
 
-![img](https://style.youkeda.com/img/ham/course/j4/mvn.svg)
+![img](https://style.xxx.com/img/ham/course/j4/mvn.svg)
 
 从这个架构里面可以看到借助于中央仓库，我们可以把 Java 代码任意的共享给别人。
 Maven 使用惯例优先于配置规则，他要求在没有制定之前，所有的项目都有如下结构
@@ -54,7 +54,7 @@ mvn clean install
 mvn compile exec:java -Dexec.mainClass=${main}
 ```
 
-这个命令的意思是在 compile 执行后， 执行运行 Java的命令，具体执行哪个 Java 类 是由 -Dexec.mainClass= ${main} 参数指定，比如我们想执行 com.youkeda.Test 类：
+这个命令的意思是在 compile 执行后， 执行运行 Java的命令，具体执行哪个 Java 类 是由 -Dexec.mainClass= ${main} 参数指定，比如我们想执行 com.xxx.Test 类：
 
 ```mvn
 mvn compile exec:java -Dexec.mainClass=com.xxx.Test
@@ -84,7 +84,7 @@ Maven 可以通过插件扩展支持更多的命令，其学习重点是掌握�
 * 管理依赖关系
 * 定制插件的
 
-可以看一下下图，![img](https://style.youkeda.com/img/ham/course/j4/pomxml.svg)
+可以看一下下图，![img](https://style.xxx.com/img/ham/course/j4/pomxml.svg)
 
 分别看一下上图的内容
 
@@ -108,7 +108,7 @@ Maven 可以通过插件扩展支持更多的命令，其学习重点是掌握�
 
 #### groupId
 
-groupId 就像一个文件夹一样，他的命名和 java 的包比较一致，这里一般只用小写的引文字母和字符 **.**  比如  com.youkeda.course 。 一般来说一个公司会设置自己的 groupId，避免和其他公司重合，个人开发者也一样
+groupId 就像一个文件夹一样，他的命名和 java 的包比较一致，这里一般只用小写的引文字母和字符 **.**  比如  com.xxx.course 。 一般来说一个公司会设置自己的 groupId，避免和其他公司重合，个人开发者也一样
 
 #### artifactId
 
