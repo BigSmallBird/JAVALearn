@@ -91,12 +91,28 @@ User(id:long;  //用户名 userName:String; //密码 pwd:String; //昵称 nickNa
 
 在 Comment 模型里面，我们添加了一个 children 字段并且设定类型为 List<Comment>, 这个字段存储所有该评论被回复的数据。  
 
-通过这个领域设计，我们可以确定这个可以满足产品的需求，南无我们可以开始设计表结构
-> 模型是为了产品而设计的，但是表射界并不是面向对象的设计思路，所以直接设计表可能变成不满足需求了  
+通过这个领域设计，我们可以确定这个模型能够满足产品需求，那么就可以进入表结构设计阶段。
+> 模型是为产品需求服务的；表结构是面向存储与查询的，两者并不完全一一对应，所以需要先建模再落表。  
 
 ### 数据库设计  
 通过模型我们来设计一下表结构，为了满足上述的模型，我们得需要设计两个表：User， Comment    
-![user - comment](SSM/img/1.png)   
+```mermaid
+erDiagram
+    USER ||--o{ COMMENT : writes
+    COMMENT ||--o{ COMMENT : replies
+    USER {
+      bigint id PK
+      varchar user_name
+      varchar nick_name
+    }
+    COMMENT {
+      bigint id PK
+      varchar ref_id
+      bigint user_id FK
+      bigint parent_id FK
+      text content
+    }
+```   
 
 对于上面的关系:  
 * ref_id 一般字符串的主键或者外键，我们都是设置 varchar(32), 这是一种约定  

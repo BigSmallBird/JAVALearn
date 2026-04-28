@@ -223,49 +223,60 @@ console.log(typeof c); //number
 
 ### 隐式类型转换：
 
-#### 数字字符串加数字，数字隐式转换为字符串
+#### `+` 遇到字符串：数字会转成字符串并拼接
 
 ```JavaScript
 console.log(20 + "20");  //结果2020
 ```
 
-结果不是 40 而是 2020， 编译器会将 20 隐式转换为 "20" ，与后面的字符串进行拼接。
+结果不是 `40`，而是 `2020`。因为 `+` 在有字符串参与时会执行拼接。
 
-#### 数字字符串与数字做非加法运算，字符串隐式转换为数字：
+#### 非加法运算（`-`、`*`、`/`）：字符串会尝试转成数字
 
 ```JavaScript
 console.log("20" - 10); //10
 console.log(10 * "10"); //100
 ```
 
-进行非加法运算时，字符串会被编译成数字
+进行非加法运算时，字符串会被转换成数字再计算。
 
-#### 数字字符串与数字字符串做非加法运算时，隐式转换成数字；
+#### 两个数字字符串做非加法运算：同样先转数字
 
 ```JavaScript
-consloe.log("20" + "10") //10
+console.log("20" - "10"); //10
 ```
+
+```mermaid
+flowchart LR
+    A["表达式"] --> B{"是否是 + 且包含字符串?"}
+    B -- 是 --> C["按字符串拼接"]
+    B -- 否 --> D["尝试转数字后计算"]
+```
+
 
 ### 强制类型转化：
 
-强制类型转换中需要学习 **parseInt（将小数字符串，整数字符串或者小数转换成整数）, parseFloat (将小数字符串转化为小数)**
+强制类型转换常用 `parseInt` 和 `parseFloat`：
+
+- `parseInt`：将字符串解析为整数（会截断小数部分）
+- `parseFloat`：将字符串解析为浮点数
 
 #### parseInt：
 
 ```JavaScript
 let number = "20";
-let converNumber = parselnt(number);
-console.log(converNumber);  //20
-console.log(typeof converNumber); //number
+let convertNumber = parseInt(number, 10);
+console.log(convertNumber);  //20
+console.log(typeof convertNumber); //number
 ```
 
 #### parseFloat:
 
 ```javascript
 let number = "10.9";
-let converNumber = parseFloat(number);
-console.log(converNumber);
-console.log(typeof converNumber);
+let convertNumber = parseFloat(number);
+console.log(convertNumber); //10.9
+console.log(typeof convertNumber); //number
 ```
 
 ### 字符串拼接：
@@ -287,16 +298,16 @@ console.log(typeof converNumber);
 
 ```JavaScript
 let number = "20.9";
-let converNumber = parseFloat(number);
-console.log(typeof converNumber + "类型");
+let convertNumber = parseFloat(number);
+console.log("转换后的数字类型是：" + typeof convertNumber);
 ```
 
 **字符串拼接不仅在 console 中使用，也可以在变量里面使用**：
 
 ```JavaScript
 let age = 20;
-let name = "傻逼"；
-let output = "your name is"  + name + 'this year' + age + "岁了";
+let name = "Tom";
+let output = "your name is " + name + ", this year " + age + " 岁了";
 console.log(output);
 ```
 
@@ -339,7 +350,7 @@ let isEqual = n === b;
 console.log(isEqual);
 ```
 
-<img src="C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250606212259153.png" alt="image-20250606212259153" style="zoom:50%;" />
+<img src=./assets/similar-diagram.svg alt="image-20250606212259153" style="zoom:50%;" />
 
 ## 条件判断：
 
@@ -378,7 +389,7 @@ switch (we) {
 }
 ```
 
-![image-20250606213313444](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250606213313444.png)
+![示意图](./assets/similar-diagram.svg)
 
 ## 数组：
 
@@ -487,7 +498,7 @@ splice 方法可以添加三个参数:
 * 第二个值，整数类型，表示步长（例如：1代表往后1个元素）
 * 第三个值，要替换的数组值
 
-eg：![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-4-HTML-CSS/4/splice.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+eg：![示意图](./assets/similar-diagram.svg)
 
 ```JavaScript
 let s = ['清华', '北京', '浙江', '同济'];
@@ -567,7 +578,7 @@ console.log(result); // -1
 
 这时候光标会在 3 的位置开始往下历遍。
 
-![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-4-HTML-CSS/4/splice.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 ### 二维数组：
 
@@ -618,7 +629,7 @@ console.log(number);  //2
 
 比如完成这个表：
 
-![image-20250607140041240](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250607140041240.png)
+![示意图](./assets/similar-diagram.svg)
 
 ```JavaScript
 let arr1 = [];  //定义一个一维空数组
@@ -689,7 +700,7 @@ JavaScript 的 for 循环与 java c 的很相似。
 
 ### for循环的写法:
 
-![img](https://document.xxx.com/P3-4-HTML-CSS/5/1.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 ### for...in 与 for...of 的写法：
 
@@ -723,7 +734,7 @@ for (let item of p){
 
 在  js  里面支持 while 循环与 do...while，
 
-![img](https://document.xxx.com/P3-4-HTML-CSS/5/2.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 > 注意： **初始条件写在 while 外面，更新条件写在  while  里面**
 
@@ -737,7 +748,7 @@ while (i < peppaFriends.length ) {
 }
 ```
 
-![img](https://document.xxx.com/P3-4-HTML-CSS/5/5.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 ```js
 let i = 0;
@@ -835,7 +846,7 @@ function print(){
 }
 ```
 
-![img](https://document.xxx.com/P3-4-HTML-CSS/6/1.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 1. 关键词“function”
 2. 函数名“print” 
@@ -852,7 +863,7 @@ let print = function() {
 };
 ```
 
-![img](https://document.xxx.com/P3-4-HTML-CSS/6/2.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 或者：
 
@@ -955,7 +966,7 @@ setTimeout 函数用来指定某个函数或者某段代码，在多少ms后执�
 
 setTimeout 函数的语法：
 
-![img](https://document.xxx.com/P3-4-HTML-CSS/6/3.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 ```JavaScript
 let timeId = setTimeout(func | code, delay);
@@ -1040,7 +1051,7 @@ conut();
 
 下面我们来看 setInterval ，它的用法与 setTimeout 完全一致，区别是 setInterval 指定某个任务每隔一段时间就执行一次，也就是无限的定时执行
 
-![img](https://document.xxx.com/P3-4-HTML-CSS/6/4.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 ```JavaScript
 let timerId = setInterval(func|code, delay);
@@ -1078,7 +1089,7 @@ function print() {
 
 对象简单来说，是一组“键值对” （key - value） 的集合，是一种无序的符合数据集合：
 
-![img](https://document.xxx.com/P3-4-HTML-CSS/7/1.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 * 大括号：定义一个对象；
 * person：定义的对象被复制给 person，则 person 将指向这个对象；
@@ -1482,7 +1493,7 @@ window.localStorage.setItem('key', 'value') 方法接受两个参数：
 
 > 打开网页的开发者工具 （右键 => 检查 => application => LocalStorage）,查看情况：
 > 
-> ![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-4-HTML-CSS/7/4.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+> ![示意图](./assets/similar-diagram.svg)
 
 注意：如果要存入的数据不是字符串的数据，最好先是转换成字符串类型，比如要存放一个对象：
 
@@ -1744,7 +1755,7 @@ console.log(handledArr);
 
 在实际的工作，我们需要处理时间。
 
-![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-4-HTML-CSS/7/2.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 JavaScript 提供一个原生时间库：Date 对象。它以 1970，1，1为时间零点，可以表示零点正负的一亿天
 
@@ -1877,7 +1888,7 @@ console.log(dt);
 
 ### 小结：
 
-![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-4-HTML-CSS/7/3.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 ## BOM：
 
@@ -1904,7 +1915,7 @@ console.log(dt);
 * history （历史）：screen 包含我们显示屏幕的信息，这个是硬件信息
 * location （地址）：location 包含当前访问的地址信息
 
-![img](https://style.xxx.com/img/course/f4/8/1.jpeg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 **特别：**
 
@@ -1971,11 +1982,11 @@ Location 对象，其用来保存当前网页位置的信息，和之前一样�
 
 #### Location 属性：
 
-![image-20250724211122071](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250724211122071.png)
+![示意图](./assets/similar-diagram.svg)
 
 用下图表示：
 
-![image-20250724211153502](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250724211153502.png)
+![示意图](./assets/similar-diagram.svg)
 
 #### Location 方法：
 
@@ -2065,7 +2076,7 @@ DOM 是整个 JavaScript 甚至是整个前端 最核心的内容。
 </html>
 ```
 
-![image-20250725174240423](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250725174240423.png)
+![示意图](./assets/similar-diagram.svg)
 
 图示就是一棵倒着的树，顶部我们称为树根，这就是 DOM 树。
 
@@ -2090,7 +2101,7 @@ window。document;
 
 从 JSConsole 我们知道， window.document 得到的是一个 HTMLDocument 对象，这个对象内容特别多，比如 document 内容 key 为 documentElement：
 
-![image-20250725180908178](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250725180908178.png)
+![示意图](./assets/similar-diagram.svg)
 
 还可以了解一下 body， head 属性，分别对应 HTML 中的 body，和 head 内容。
 
@@ -2118,13 +2129,13 @@ window.document 也就是整个 HTML 的内容
 <body>
   <nav class="nav">
     <a class="qq">
-      <img src="https://document.xxx.com/P3-1-HTML-CSS/1.9/3-qq/qq.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10" />
+      <img src=./assets/similar-diagram.svg />
       <span>QQ</span>
     </a>
     <ul class="right">
       <li class="bright">
         <img
-          src="https://document.xxx.com/P3-1-HTML-CSS/1.9/3-qq/bright.png"
+          src=./assets/similar-diagram.svg
           alt="QQ靓号"
         />
       </li>
@@ -2132,7 +2143,7 @@ window.document 也就是整个 HTML 的内容
         <span>简体中文</span>
         <img
           class="arrow"
-          src="https://document.xxx.com/P3-1-HTML-CSS/1.9/3-qq/arrow-down.png"
+          src=./assets/similar-diagram.svg
         />
       </li>
       <li class="contact">意见反馈</li>
@@ -2342,7 +2353,7 @@ let divDom = document.querySelector('div#test');
 console.log(divDom.outerHTML, divDom.innerHTML, divDom.innerText);
 ```
 
-![image-20250725204511183](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250725204511183.png)
+![示意图](./assets/similar-diagram.svg)
 
 #### DOM 亲属：
 
@@ -2359,7 +2370,7 @@ console.log('-----');
 console.log(divDom.parentNode);
 ```
 
-![image-20250725205506538](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250725205506538.png)
+![示意图](./assets/similar-diagram.svg)
 
 #### DOM 样式：
 
@@ -2440,7 +2451,7 @@ console.log(article.dataset);
 
 在 Web 基础课程 第八章 由讲过 position：absolute 由一个案例：
 
-![image-20250726105735733](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250726105735733.png)
+![示意图](./assets/similar-diagram.svg)
 
 先不考虑点击事件，这里我们先内置点击代码：
 
@@ -2455,7 +2466,7 @@ console.log(article.dataset);
     <section class="box">
         <img
              class="java"
-             src="https://document.xxx.com/new-learn-path/Bitmap.png" />
+             src=./assets/similar-diagram.svg />
         <div class="title">
             java
         </div>
@@ -2654,7 +2665,7 @@ function createDisease (txt) {
 
 ### 案例介绍：
 
-![image-20250726183344788](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250726183344788.png)
+![示意图](./assets/similar-diagram.svg)
 
 我们来模拟一下简化版的百度搜索：
 
@@ -2840,7 +2851,7 @@ h1.addEventListener("click", function(e) {
 });
 ```
 
-![image-20250728192118782](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250728192118782.png)
+![示意图](./assets/similar-diagram.svg)
 
 ### 焦点事件，focus：
 
@@ -2935,7 +2946,23 @@ moreBtn,addEventListener('click', function() {
 
 ## 冒泡，委托，捕捉：
 
-很多个场景会遇到这个：
+这是 DOM 事件里最容易混淆的三个概念，先看整体传播路径：
+
+```mermaid
+flowchart TD
+    A["window / document"] --> B["html"]
+    B --> C["body"]
+    C --> D["父元素"]
+    D --> E["目标元素 target"]
+    E --> D
+    D --> C
+    C --> B
+    B --> A
+```
+
+- 从上到下到达目标元素：**捕获阶段**
+- 在目标元素上触发：**目标阶段**
+- 从目标元素回到祖先：**冒泡阶段**
 
 ### 冒泡：
 
@@ -2956,7 +2983,7 @@ workspace.addEventListener('click', function() {
 
 ```js
 likeBtn.addEventListener('click', function(e) {
-    e.stopProppagation();
+    e.stopPropagation();
     ......
 });
 ```
@@ -3001,7 +3028,7 @@ box.addEventListener('click', function() {
 > target 表示的是真实的响应事件的 DOM 节点
 
 ```js
-const box = document.querSelector('.box');
+const box = document.querySelector('.box');
 
 box.addEventListener('click', function(e) {
     if (e.target.nodeName === 'IMG') {
@@ -3117,7 +3144,7 @@ window.addEventListener('scorll', () => {
            <img 
            class="first"
            alt=""
-           src="http://document.xxx.com/p3-1-HTML-CSS/1.8/1.jpg?x-oss-process=image/resize,h_300"
+           src=./assets/similar-diagram.svg
            />
            `
        }
@@ -3150,13 +3177,13 @@ window.addEventListener('scorll', () => {
 
 上节讲到豆瓣地址：[https://www.douban.com/](javascript:void(0))  的开头表示使用了 HTTPS 协议。那么为什么把协议放在地址开头？
 
-![image-20250803184057836](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250803184057836.png)
+![示意图](./assets/similar-diagram.svg)
 
 这个页面的地址就有点复杂，地址栏输入的地址，叫做 URL ，也就是我们常常说的网址，这个页面的 URL 就是：https://www.douban.com/gallery/topic/116390/?from=hot_topic_note&sort=new
 
 URL 是缩写，全称是：Uniform Resource Locator (统一资源定位符)。URL 的格式规范定了由哪几部分组成，以及各种符号的作用
 
-![image-20250803184344043](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250803184344043.png)
+![示意图](./assets/similar-diagram.svg)
 
 格式说明：
 
@@ -3211,7 +3238,7 @@ API：可以快速访问某个程序
 
 把这个粘贴到浏览器，可以查询到返回结果：
 
-![image-20250804084234632](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250804084234632.png)
+![示意图](./assets/similar-diagram.svg)
 
 文字如下：
 
@@ -3228,9 +3255,19 @@ API：可以快速访问某个程序
 
 API 返回的内容统称为 数据，那么我们该如何使用 Javascript 获取者部分数据？使用  **fetch** 方法，我们来看代码：
 
+```mermaid
+sequenceDiagram
+    participant Browser as 浏览器
+    participant API as API 服务
+    Browser->>API: fetch(url)
+    API-->>Browser: Response
+    Browser->>Browser: response.json()
+    Browser->>Browser: .then(data => ...)
+```
+
 ```js
 fetch(
-    'API'
+    'https://mock.xxx.com/api/m/f4-11-1-1'
 )
     .then(function (response) {
     return response.json();
@@ -3255,7 +3292,7 @@ oReq.open(
     'GET',
     'https://mock.xxx.com/api/m/f4-11-1-1'
 );
-oPeq.send();
+oReq.send();
 ```
 
 这个是老版的 ajax 调用，
@@ -3282,9 +3319,9 @@ https://mock.xxx.com/api/m/reply?mood=happy
 
 ## POST 请求：
 
-![image-20250804101941685](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250804101941685.png)
+![示意图](./assets/similar-diagram.svg)
 
-![image-20250804102033658](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250804102033658.png)
+![示意图](./assets/similar-diagram.svg)
 
 js 是如何提交 POST 请求？
 
@@ -3301,12 +3338,12 @@ fetch 是默认发起 GET 请求的，我们看文档：https://developer.mozill
 我们只需要添加一个 **method** 就行了。
 
 ```js
-fetch (
-    'API',
-    {method: 'POST'}
-).then (response => {
+fetch(
+    'https://mock.xxx.com/api/m/f4-11-4-1',
+    { method: 'POST' }
+).then(response => {
     return response.json();
-}).then (myJson => {
+}).then(myJson => {
     console.log(myJson);
 });
 ```
@@ -3324,25 +3361,25 @@ password: '123456';
 
 ```js
 const data = JSON.stringify({
-    uesrname : admin,
-    password : 123456
+    username: 'admin',
+    password: '123456'
 });
 
-fetch (
-    'API',
+fetch(
+    'https://mock.xxx.com/api/m/f4-11-4-1',
     {
         method: 'POST',
         body: data,
         headers: {
-            'content-type': 'application/json'
+            'Content-Type': 'application/json'
         }
     }
 )
 .then(response => {
     return response.json();
 }).then(myJson => {
-        console.log(myjson);
-        });
+    console.log(myJson);
+});
 ```
 
 ## Chrome Network：
@@ -3358,8 +3395,8 @@ fetch (
 3. 在 Chrome 开发者工具 选择 Network
 4. 刷新
 
-![image-20250805192357579](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250805192357579.png)
+![示意图](./assets/similar-diagram.svg)
 
 在 Headers 里面我们可以看见返回情况：
 
-![image-20250805192436421](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250805192436421.png)
+![示意图](./assets/similar-diagram.svg)

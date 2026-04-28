@@ -25,13 +25,30 @@
 
 关系型数据库模型是把复杂的数据结构归结为简单的二元关系（二维列表）。在关系数据库里，对数据的操作几乎全部建立在一个或多个关系表格上，通过对这些关系表格分类，合并，连接或者取等来实现数据的管理。
 
-![img](https://style.xxx.com/newcoursep4/d1/d1-1/%E7%94%BB%E6%9D%BF.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+```mermaid
+erDiagram
+    USER ||--o{ ORDER : places
+    USER {
+      bigint id PK
+      varchar nickname
+    }
+    ORDER {
+      bigint id PK
+      bigint user_id FK
+      decimal amount
+    }
+```
 
 ### 表结构：
 
 我们来看：
 
-![img](https://style.xxx.com/newcoursep4/d1/d1-1/%E5%AD%A6%E7%94%9F%E8%A1%A8123.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+```mermaid
+flowchart TD
+    T["表（Table）"] --> C["列（Column/字段）"]
+    T --> R["行（Row/记录）"]
+    C --> D["数据类型、约束（NOT NULL/UNIQUE）"]
+```
 
 * 表由名，行，列，列名构成
 * 列是Excel 中的一列，表示纵周
@@ -84,7 +101,7 @@ mysql -Dxxx(仓库名) -e 'desc `xxxx(表名)`;'
 
 我们在云服务器上创建了一个数据库，在数据库上我们可以创建很多DB，它们供用一个与服务器，我们配置超链接的是其中一个数据库，之后我们涉及的所有表格都在我们配置的数据库下
 
-![img](https://style.xxx.com/newcoursep4/d1/d1-3/db1.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 ### 表明：
 
@@ -122,7 +139,14 @@ mysql -Dxxx(仓库名) -e 'desc `xxxx(表名)`;'
 
 ## CRUD：
 
-在计算机里： **创建（Create）**，**读取（Read）**，**更新（Update）**。**删除（Delete）**，也就是CEUD；这一连的动作行为，通常是为了针对某个特定的资源所做出来的举动。这四个动作最常见的用途是在使用SQL数据库于网站的API端口时被发现。
+在计算机里：**创建（Create）**、**读取（Read）**、**更新（Update）**、**删除（Delete）**，也就是 **CRUD**。这四个动作是数据系统最核心的操作模型，也常映射到 Web API 设计。
+
+```mermaid
+flowchart LR
+    A["Create"] --> B["Read"]
+    B --> C["Update"]
+    C --> D["Delete"]
+```
 
 | 英文     | 中文  | SQL        | HTTP   |
 |:------:|:---:|:----------:|:------:|

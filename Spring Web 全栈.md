@@ -1,8 +1,8 @@
 # Spring Web 全栈
 
-![image-20250826110111011](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250826110111011.png)
+![示意图](./assets/similar-diagram.svg)
 
-![image-20250826110150985](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250826110150985.png)
+![示意图](./assets/similar-diagram.svg)
 
 ## Maven 入门：
 
@@ -14,7 +14,7 @@ Maven 是一个 **项目管理和构建自动化工具** 。但实际对于我�
 
 ### Maven 系统架构：
 
-![img](https://style.xxx.com/img/ham/course/j4/mvn.svg)
+![示意图](./assets/similar-diagram.svg)
 
 从这个架构里面可以看到借助于中央仓库，我们可以把 Java 代码任意的共享给别人。
 Maven 使用惯例优先于配置规则，他要求在没有制定之前，所有的项目都有如下结构
@@ -68,11 +68,11 @@ Maven 可以通过插件扩展支持更多的命令，其学习重点是掌握�
 
 关于 Maven 核心概念： 
 
-![image-20250902202221517](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250902202221517.png)
+![示意图](./assets/similar-diagram.svg)
 
 这 五个 概念都运用在 Maven 的配置文件。 Maven 的配置文件是一个强约定的 XML 格式文件，他的文件名一定是 pom.xml。
 
-![image-20250902202758505](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250902202758505.png)
+![示意图](./assets/similar-diagram.svg)
 
 学习 Maven 我们只需要能够认识 pom.xml 内容就可以，
 
@@ -84,7 +84,7 @@ Maven 可以通过插件扩展支持更多的命令，其学习重点是掌握�
 * 管理依赖关系
 * 定制插件的
 
-可以看一下下图，![img](https://style.xxx.com/img/ham/course/j4/pomxml.svg)
+可以看一下下图，![示意图](./assets/similar-diagram.svg)
 
 分别看一下上图的内容
 
@@ -872,7 +872,7 @@ System.out.println(content2);
 
 为了管理 Bean， Spring Bean 提供了生命周期管理能力，着将极大的提高工程化的能力
 
-> 生命周期： ![](C:\Users\15956\AppData\Roaming\marktext\images\2025-10-22-12-21-38-image.png)
+> 生命周期： ![示意图](./assets/similar-diagram.svg)
 
 我们在以后遇见运行的问题可能会用到
 
@@ -945,7 +945,7 @@ Spring Boot的版本很快，一般选择 RELEASE 版本。
 
 对于 Web 服务：
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-10-22-16-37-07-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 > 所有的的网页都是这样的一个过程。在 Spring Boot 方案里面，一个网页请求到服务器之后，首先我们进入的是 Java Web 服务器。然后进入 Spring Boot 应用最后 匹配到某个 Spring Controller 然后路由到某个具体的 Bean 方法执行返回结果，输出给客户端。
 
@@ -976,7 +976,7 @@ public class HelloControl {
 
 在Spring Boot 应用里面，一般把网页存放在 src/main/resources/static 目录下面
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-10-22-16-50-42-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 在 controller 中，会自动加载 static 下的 html 内容，所以通过 Spring Boot 建设网站很简单
 
@@ -1014,9 +1014,9 @@ public class HelloControl{
 </html>
 ```
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-10-22-17-09-00-image.png)
+![示意图](./assets/similar-diagram.svg)
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-10-22-17-09-10-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 ## RequstMapping
 
@@ -1052,7 +1052,7 @@ public class HelloControl {
 
 我们会发现，同一个网址，只是换了参数值，内容就会发生变化，这项技术就是 URL 参数解析，这也是 get request 必须掌握的能力。
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-10-22-21-11-55-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 ## 获取 Http URL 参数
 
@@ -1175,7 +1175,7 @@ public String index(@RequestParam(name="pageNum", required = false) int pageNum,
 
 @RequestParam(name="pageNum", required = false) int pageNum, @RequestParam("id") String id)
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-10-23-10-53-21-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 > 到这里可能大家会问，方法定义参数的顺序和 URL 的参数顺序有没有关系，没有关系。参数顺序无所谓
 
@@ -1237,7 +1237,7 @@ Web 开发离不开动态页面开发，很早就有企业使用 JSP 技术来�
 
 Web 工程师 基本上也必须掌握一门模板框架的，要不然无法办法成功完成动态网页开发。
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-10-23-17-00-42-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 如上图，我们通过模板引擎，可以把 Java 对象数据 + 模板页面 动态的渲染出一个真实的 HTML 页面来。
 
@@ -1309,7 +1309,7 @@ Thymeleaf 模板文件也是 html 作为文件格式的，所以它也是最容�
 
 模板文件的最后虽然也是  .html ，大部分内容跟 HTML 文件很像，但它放置在 src/main/resources/templates 目录下面，而且里面可以写变量 : th:text="${...}"  所以它不是 html 文件，而是 thymeleaf 模板
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-10-23-17-26-59-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 ## 特别的：
 
@@ -1557,9 +1557,9 @@ public String index(Model model){
 
 ## String:
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-10-29-22-39-38-image.png)
+![示意图](./assets/similar-diagram.svg)
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-10-29-22-40-25-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 <a href="[Arrays (thymeleaf 3.0.11.RELEASE API)](https://www.thymeleaf.org/apidocs/thymeleaf/3.0.11.RELEASE/org/thymeleaf/expression/Arrays.html)" target="_blank_">文档</a>
 
@@ -1596,7 +1596,7 @@ th:text 与 [[]] 两种写法都被允许
 
 ### 图书模型：
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-11-01-13-58-38-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 上面的 UML 写成 Java 代码是：
 
@@ -1781,7 +1781,7 @@ Spring Validation 也是 JSR 380 提案的一个实现方案。
 
 ## Valication 注解：
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-11-01-16-12-36-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 ```java
 public class User {
@@ -1926,7 +1926,7 @@ addUserSuccess.html
 
 layout 解决的是模板复用的问题，比如常见的网站是下面这样的。
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-11-09-16-23-16-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 按照这个布局，我们可以把导航和底部做成布局组件，每个页面套用就可以了
 
@@ -2138,9 +2138,9 @@ logging.level.fm.douban.app=info
 
 常用的日志优先级：
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-11-17-23-24-55-image.png)
+![示意图](./assets/similar-diagram.svg)
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-11-17-23-25-17-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 ## 编码：
 
@@ -2167,7 +2167,7 @@ public class SongListControl {
 
 主要这个方法名（info()）与日志级别一一对应：
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-11-17-23-51-01-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 如果想要输出警告信息就调用 LOG.warm()方法
 
@@ -2245,7 +2245,7 @@ public class SongListControl {
 
 Cookie 是网络编程中使用最广泛的一项技术。主要用于身份辨别。客户端（浏览器）与网站服务端通信的过程：
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-11-20-12-43-11-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 从图中看，服务端即需要返回cookie给客户端，也要读取客户端提交的 Cookie 的。本接就学习服务端 Spring 工程如何使用 cookie 的，有读和写两种操作。
 
@@ -2377,7 +2377,7 @@ public Map index(HttpServletRespones respones){
 
 采用 Session 会话机制可以解决这个问题。**用户ID，登录状态** 等重要信息不纯放在客户端，而是存放在服务器里面。从而避免了安全隐患。通讯过程如下：
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-11-24-19-29-12-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 使用会话机制时，Cookie 作为 session id 的载体与客户端通信。上一节的演示代码里面，cookie 中的 JSESSIONID 就是这个作用
 
@@ -2607,7 +2607,7 @@ public class SpringHttpSessionConfig {
 
 # Spring Request 拦截器：
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-11-30-19-22-46-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 拦截器必须实现 HandlerInterceptor 接口。可以在三个点进行拦截。
 
@@ -2769,7 +2769,7 @@ exit
 
 为了支持 Mongo DB 我们需要增加一个选项：
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-12-11-19-29-55-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 或者手动创建：
 
@@ -3086,7 +3086,7 @@ sudo docker exec -it mongo mongosh admin
 
 会看到以下的界面：
 
-![](C:\Users\15956\AppData\Roaming\marktext\images\2025-12-18-08-39-07-image.png)
+![示意图](./assets/similar-diagram.svg)
 
 就表示启动成功了。此时，光标停留在 `>` 后面，表示可以输入**数据库操作命令**了。
 

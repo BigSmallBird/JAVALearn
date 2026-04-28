@@ -14,11 +14,11 @@ HTML 的语言形式为标签（如<p>）包围的 HTML元素，如:
 
 ### 刨析一个 HTML 元素：
 
-![img](https://document.xxx.com/P3-1-HTML-CSS/1.2/2.jpg)
+![示意图](./assets/similar-diagram.svg)
 
 ## HTML中的嵌套：
 
-![img](https://document.xxx.com/P3-1-HTML-CSS/1.2/3.png)
+![示意图](./assets/similar-diagram.svg)
 
 在HTML中，元素可以发生**嵌套**。
 
@@ -36,11 +36,11 @@ HTML 的语言形式为标签（如<p>）包围的 HTML元素，如:
 
 第一个元素整体为作为// <div></div> // 的内容，镶嵌在// <div></div> //内部，从结构上发生**嵌套**关系。
 
-div 是 p 的父元素，![img](https://document.xxx.com/P3-1-HTML-CSS/1.2/16.png)
+div 是 p 的父元素，![示意图](./assets/similar-diagram.svg)
 
 ## 对于完整的HTML文件：
 
-![img](https://document.xxx.com/P3-1-HTML-CSS/1.2/4.jpg)
+![示意图](./assets/similar-diagram.svg)
 
 有以上元素
 
@@ -84,7 +84,7 @@ div 是 p 的父元素，![img](https://document.xxx.com/P3-1-HTML-CSS/1.2/16.pn
 
 ## 对于 HTML 的注解：
 
-![img](https://document.xxx.com/P3-1-HTML-CSS/1.2/6.png)
+![示意图](./assets/similar-diagram.svg)
 
 ## 对于 // <img> //:
 
@@ -98,17 +98,17 @@ div 是 p 的父元素，![img](https://document.xxx.com/P3-1-HTML-CSS/1.2/16.pn
 
 HTML 提供了一个链接标签 //<a>// 给文章添加标签链接。 //<a>// 是一个内联标签，用户点击后，浏览器会跳转到指定网址。
 
-![img](https://document.xxx.com/P3-1-HTML-CSS/1.3/12.png)
+![示意图](./assets/similar-diagram.svg)
 
 对于//<a>// 标签，不仅可以放置文字，也可以放置其他元素，比如段落，图像，多媒体等。
 
-![img](https://document.xxx.com/P3-1-HTML-CSS/1.3/14.png)
+![示意图](./assets/similar-diagram.svg)
 
 ### 标签属性：
 
 * **href** herf 属性是给出链接指向的网址，他的值一般是一个 URl 或者是一个锚点。
 * **title** title 属性给出链接的说明信息。鼠标悬停在链接上方，浏览器会将这个属性的值，以提示块的形式显示出来。
-* **target** taget 属性指向如何展示打开的链接。target 属性的值也可以是“self”, "blank", "parent", "top" 四个关键词之一。![img](https://document.xxx.com/P3-1-HTML-CSS/1.3/19.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+* **target** taget 属性指向如何展示打开的链接。target 属性的值也可以是“self”, "blank", "parent", "top" 四个关键词之一。![示意图](./assets/similar-diagram.svg)
 
 对于_self标签，其描述链接为在本基础上打开。
 
@@ -120,13 +120,13 @@ HTML 提供了无序列表标签//<ul>//和有序列表标签//<ol>//
 
 ### 对于无序列表：
 
-![img](https://document.xxx.com/P3-1-HTML-CSS/1.3/20.png)
+![示意图](./assets/similar-diagram.svg)
 
 使用//<ul> .... </ul>// 经行连接。
 
 ### 对于有序列表：
 
-![img](https://document.xxx.com/P3-1-HTML-CSS/1.3/21.png)
+![示意图](./assets/similar-diagram.svg)
 
 使用//<ol>...</ol>// 经行连接
 
@@ -195,7 +195,7 @@ HTML 提供了无序列表标签//<ul>//和有序列表标签//<ol>//
 
 //<input type="text" placeholder="XXX" name="XXX" value="SB" readonly>//  **该文本框现在我只读权限**
 
-![image-20250516180340279](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250516180340279.png)
+![示意图](./assets/similar-diagram.svg)
 
 对于该两个属性的区别：
 
@@ -281,9 +281,9 @@ HTML 提供了无序列表标签//<ul>//和有序列表标签//<ol>//
 
 ### 单选菜单：
 
-![image-20250519125540163](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250519125540163.png)
+![示意图](./assets/similar-diagram.svg)
 
-对于某种情况：我们给用户提供几个固定选项，因为实际问题可以产生很多选项，属于我们不采用单选框，而是应用新标签 // <select> // 和 // <option> // 选项菜单。![img](https://document.xxx.com/P3-1-HTML-CSS/1.4/6.jpg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+对于某种情况：我们给用户提供几个固定选项，因为实际问题可以产生很多选项，属于我们不采用单选框，而是应用新标签 // <select> // 和 // <option> // 选项菜单。![示意图](./assets/similar-diagram.svg)
 
 ```html
 <select name="career">
@@ -354,7 +354,7 @@ HTML 提供了无序列表标签//<ul>//和有序列表标签//<ol>//
 </form>
 ```
 
-![img](https://document.xxx.com/P3-1-HTML-CSS/1.4/9.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 ## HTML内部添加样式：
 
@@ -392,7 +392,7 @@ HTML 提供了无序列表标签//<ul>//和有序列表标签//<ol>//
 
 在CSS中，样式是由属性和值组成，中间用冒号（：）隔开，用分号（；）收尾，其中属性可以理解位身高，体重，值可以理解为 1.8 m，60 kg，在现实生活中，我们用这样一对组合描述人，在CSS我们来描述字体粗细，大小，颜色
 
-![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.5/key_value.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 #### 字体大小：
 
@@ -449,7 +449,7 @@ text-align: left
 
 text-align: right
 
-#### 行高：![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.5/%E8%A7%A3%E9%87%8A%E8%A1%8C%E9%AB%981.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+#### 行高：![示意图](./assets/similar-diagram.svg)
 
 行高设置格式：
 
@@ -490,7 +490,7 @@ line-height: 30px
 ## CSS三种引入方式：
 
 1. **行内样式**
-2. ![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.6/line-style-css.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+2. ![示意图](./assets/similar-diagram.svg)
 
 ```html
 <p style="font-size: 18px;font-weight: 700;color: blue;">
@@ -506,7 +506,7 @@ line-height: 30px
 
 2. **内部引入**
    
-   ![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.6/head-style-css.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+   ![示意图](./assets/similar-diagram.svg)
 
 **抽离步骤** 
 
@@ -514,7 +514,7 @@ line-height: 30px
 
 (2). 然后在和 head 标签里声名与i个 //<style> </style>//标签
 
-(3). 将这些样式放在//<style></style>// 标签里![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.6/%E5%A4%B4%E9%83%A8%E6%A0%B7%E5%BC%8F%E6%8A%BD%E7%A6%BB.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+(3). 将这些样式放在//<style></style>// 标签里![示意图](./assets/similar-diagram.svg)
 
 (4). 将相同标签的样式写在相同的大括号里，大括号前面加上标签名：
 
@@ -525,7 +525,7 @@ p {
 }
 ```
 
-![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.6/%E6%A0%B7%E5%BC%8F%E9%87%8D%E7%82%B9%E8%A7%A3%E9%87%8A.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 * 不要忘记写声名标签// <style></style>//
 * 样式要用花括号括起来
@@ -535,7 +535,7 @@ p {
 
 随着代码量的增加，整个HTML 文件会显得头重脚轻，CSS代码会比HTML多，所以我们 让代码实现分离HTML负责结构，CSS负责样式
 
-![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.6/%E5%A4%96%E9%83%A8%E6%A0%B7%E5%BC%8F%E5%BC%95%E5%85%A5%E6%AD%A5%E9%AA%A4.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 * 新建一个 **index.php** 文件
 * 将 html 代码头部中的 **style** 标签内的样式全部拷贝出来
@@ -564,7 +564,7 @@ CSS 进行注解的方法是 /*  */
 
 **相对路径避免了对路径造成的页面资源丢失现象，在引入外部资源的时候，都会选择使用相对路径**
 
-* **./**   :当前文件夹目录，比如在下面这个目录结构（test文件夹下有index.css和index.html两个文件夹），要在index.html中引入index.css就需要用 **./**![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.6/dangqianmulu.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+* **./**   :当前文件夹目录，比如在下面这个目录结构（test文件夹下有index.css和index.html两个文件夹），要在index.html中引入index.css就需要用 **./**![示意图](./assets/similar-diagram.svg)
 
 ```html
 <link rel="stylesheet" href="./index.css">
@@ -572,7 +572,7 @@ CSS 进行注解的方法是 /*  */
 <link rel="stylesheet" href="index.css">
 ```
 
-* **../**   :回到上一级文件夹目录，比如下面文件目录结构中（index.html在test文件夹里面，index.css 和test文件夹在同一级目录下），我们要在index.html中引入index.css文件，需要先从test文件夹出来，才能找到index.css，从某个文件夹里面出来久用**../**![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.6/fanhuishangyijimulu.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+* **../**   :回到上一级文件夹目录，比如下面文件目录结构中（index.html在test文件夹里面，index.css 和test文件夹在同一级目录下），我们要在index.html中引入index.css文件，需要先从test文件夹出来，才能找到index.css，从某个文件夹里面出来久用**../**![示意图](./assets/similar-diagram.svg)
 
 ```html
 <link rel="stylesheet" href="../index.css">
@@ -588,7 +588,7 @@ CSS 进行注解的方法是 /*  */
 
 下图可以清楚的看到标签选择器的作用--选所有叫 p 的标签，然后就可以统一给所有的 怕标签设置样式
 
-![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.6/xuanzeqi-1.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 ```html
 <h3 style="font-size: 25px;color: #330867;">孟航沛</h3>
@@ -716,7 +716,7 @@ id选择器  > 类选选选择器 > 标签选择器
 
 在网页布局中，页面是有一个个大小不一样的小块区域构成，
 
-![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.7/taobao-demo.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 要画一个格子，首先要了解一个新标签  --div 标签。
 
@@ -729,7 +729,7 @@ id选择器  > 类选选选择器 > 标签选择器
 
 这些标签有一个共同属性们就是独占一行
 
-**div** 标签是一个干净透彻的矩形![img](https://style.xxx.com/img/ham/course/f1/boxmodel.jpeg?x-oss-process=image/resize,w_655/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_ne,x_10,y_10):
+**div** 标签是一个干净透彻的矩形![示意图](./assets/similar-diagram.svg):
 
 由四部分组成
 
@@ -738,7 +738,7 @@ id选择器  > 类选选选择器 > 标签选择器
 * 边框 border
 * 外边框 margin
 
-![img](https://style.xxx.com/img/ham/course/f1/boxsample.png?x-oss-process=image/resize,w_1024/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 ## 内容区：content
 
@@ -748,11 +748,11 @@ id选择器  > 类选选选择器 > 标签选择器
 <div></div>
 ```
 
-![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.7/div%E9%BB%98%E8%AE%A4%E7%9A%84%E9%AB%98%E5%BA%A6.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 ## 内边距--padding：
 
-![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.7/taobao-padding.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 edg：
 
@@ -774,9 +774,9 @@ edg：
 }
 ```
 
-![image-20250530144548288](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250530144548288.png)
+![示意图](./assets/similar-diagram.svg)
 
-![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.7/padding-explore.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 > 注意：padding 区域是包含在背景颜色区域内的，也就是说背景颜色包含了 padding 和 content
 
@@ -854,7 +854,7 @@ edg:
 
 如果在原代码里添加 padding： 0px 20px; 那么就会变成这样
 
-![image-20250530151618182](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250530151618182.png)
+![示意图](./assets/similar-diagram.svg)
 
 以为黄色部分为son，其宽 20px 是在继承父辈 width 100%而变的。 
 
@@ -964,7 +964,7 @@ div{
 }
 ```
 
-![image-20250530155216262](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250530155216262.png)
+![示意图](./assets/similar-diagram.svg)
 
 ```css
 div{
@@ -1022,7 +1022,7 @@ div{
 
 margin---外边距，就是矩形与矩形之间的距离
 
-![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.7/margin1.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 如果想要红色边框矩形与绿色矩形之间优边距，就可以给红色边框设置与i个 margin 属性。
 
@@ -1072,13 +1072,13 @@ margin---外边距，就是矩形与矩形之间的距离
 <h4> +1 </h4>
 ```
 
-![image-20250604222428919](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250604222428919.png)
+![示意图](./assets/similar-diagram.svg)
 
 **这是块元素的性质：**独占一行：
 
 比如下图：
 
-![img](https://qgt-document.oss-cn-beijing.aliyuncs.com/P3-1-HTML-CSS/1.7/block1.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 第一行是两个内元素，可以并排显示，第二行是一个块元素，内容部分是蓝色，其他部分是灰色占位。所以他不能跟其他元素并行。
 
@@ -1098,7 +1098,7 @@ margin---外边距，就是矩形与矩形之间的距离
 }
 ```
 
-![image-20250604223134175](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250604223134175.png)
+![示意图](./assets/similar-diagram.svg)
 
 对于一个块标签：
 
@@ -1116,7 +1116,7 @@ margin---外边距，就是矩形与矩形之间的距离
 }
 ```
 
-<img src="C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250604223647821.png" alt="image-20250604223647821" style="zoom: 80%;" />
+<img src=./assets/similar-diagram.svg alt="image-20250604223647821" style="zoom: 80%;" />
 
 #### 行内元素和块状元素之间的转换：
 
@@ -1167,7 +1167,7 @@ div {
 }
 ```
 
-![image-20250604225038479](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250604225038479.png)
+![示意图](./assets/similar-diagram.svg)
 
 ## 盒模型--display:inline/inline-block:
 
@@ -1189,7 +1189,7 @@ a {
 }
 ```
 
-![image-20250604230744032](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250604230744032.png)
+![示意图](./assets/similar-diagram.svg)
 
 #### 行内元素可以设置左右 margin，但是不能设置上下margin
 
@@ -1218,7 +1218,7 @@ div {
 }
 ```
 
-![image-20250604231434530](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250604231434530.png)
+![示意图](./assets/similar-diagram.svg)
 
 对于 inline 行内标签，margin-top 与 margin-bottom 元素其实是没有作用的
 
@@ -1230,7 +1230,7 @@ inline-block 要比 block 在应用方面更加广泛，因为我们更多的时
 
 关于 inline-block 这个值：
 
-![image-20250604232102286](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250604232102286.png)
+![示意图](./assets/similar-diagram.svg)
 
 这两个盒子之间多了一个空白，但是我们没有设置 margin 的值，其原因就是我们在两个 div 之间打了一个回车，在 html 中，回车会被当成文字解析
 
@@ -1258,7 +1258,7 @@ div {
 }
 ```
 
-![image-20250604232550565](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250604232550565.png)
+![示意图](./assets/similar-diagram.svg)
 
 2. **给父类元素添加 word-spacing 属性**
 
@@ -1291,7 +1291,7 @@ word-spacing 属性就是单词与单词之间的距离，这里将这个距离�
 }
 ```
 
-![image-20250604233048861](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250604233048861.png)
+![示意图](./assets/similar-diagram.svg)
 
 3. **给父类元素设置 font-size：0px;**
 
@@ -1321,19 +1321,19 @@ word-spacing 属性就是单词与单词之间的距离，这里将这个距离�
         <img
           alt=""
           class="first"
-          src="https://document.xxx.com/P3-1-HTML-CSS/1.8/1.jpg?x-oss-process=image/resize,h_300"
+          src=./assets/similar-diagram.svg
         />
         <img 
           alt=""
-          src="https://document.xxx.com/P3-1-HTML-CSS/1.8/2.jpg?x-oss-process=image/resize,h_300"
+          src=./assets/similar-diagram.svg
         />
         <img
           alt=""
-          src="https://document.xxx.com/P3-1-HTML-CSS/1.8/3.jpg?x-oss-process=image/resize,h_300"
+          src=./assets/similar-diagram.svg
          />
         <img
           alt=""
-          src="https://document.xxx.com/P3-1-HTML-CSS/1.8/4.jpg?x-oss-process=image/resize,h_300"
+          src=./assets/similar-diagram.svg
          />
     </div>
     <h2> LISTEN </h2>
@@ -1374,7 +1374,7 @@ position 除了 static 属性外，还有 4 个常用的值，分别为：
 
 如果想让：
 
-![image-20250605213442764](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250605213442764.png)
+![示意图](./assets/similar-diagram.svg)
 
 这样的话：
 
@@ -1387,7 +1387,7 @@ position 除了 static 属性外，还有 4 个常用的值，分别为：
 }
 ```
 
-![image-20250605213657801](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250605213657801.png)
+![示意图](./assets/similar-diagram.svg)
 
 结果会和我我们想的不一样，第一张图片确实动了，但是文档下部分也同样网下移动了 50 px; 也就是 margin 会引起文档流的变化。
 
@@ -1418,15 +1418,15 @@ position 除了 static 属性外，还有 4 个常用的值，分别为：
 }
 ```
 
-![image-20250605221540191](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250605221540191.png)
+![示意图](./assets/similar-diagram.svg)
 
-![image-20250605221557215](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250605221557215.png)
+![示意图](./assets/similar-diagram.svg)
 
 > absolute 被称为 **绝对定位** 是不为元素预留空间的，通过指定元素相对于最近的非 static 定位的祖先元素的偏移，来确定元素位置
 
 ## position - fixed (固定定位)：
 
-在很多场景下，文章的标题会一直停留在浏览器的顶部，不会随着页面的滚动而消失，比如![image-20250608132413956](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250608132413956.png)
+在很多场景下，文章的标题会一直停留在浏览器的顶部，不会随着页面的滚动而消失，比如![示意图](./assets/similar-diagram.svg)
 
 无法动态展示，自行脑补
 
@@ -1477,7 +1477,7 @@ h1 {
 > 
 > 固定定位不为元素预留空间，而是通过指定元素相对于屏幕视口的位置来指定元素位置，元素的位置在屏幕滚动时不会改变
 
-在滚动时，会有固定标签内容被其他模块遮挡的情况：![img](http://document.xxx.com/P3-1-HTML-CSS/1.8/4-fixed/2.jpeg?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+在滚动时，会有固定标签内容被其他模块遮挡的情况：![示意图](./assets/similar-diagram.svg)
 
 着需要 **z-index** 来解决
 
@@ -1503,7 +1503,7 @@ h1 {
 
 ## Position-sticky:
 
-![image-20250608145347039](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250608145347039.png)
+![示意图](./assets/similar-diagram.svg)
 
 我们用这一张图，来演示 sticky：
 
@@ -1518,17 +1518,17 @@ h1 {
 }
 ```
 
-sticky 是一个新标签，有很多应用场景：![img](https://document.xxx.com/P3-1-HTML-CSS/1.8/6-sticky/2.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+sticky 是一个新标签，有很多应用场景：![示意图](./assets/similar-diagram.svg)
 
-![img](https://document.xxx.com/P3-1-HTML-CSS/1.8/6-sticky/3.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
-![img](https://document.xxx.com/P3-1-HTML-CSS/1.8/6-sticky/4.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 ## Float：
 
 **float ** 是CSS中最常用的布局标签，使用它可以让元素靠左或者靠右排版，
 
-![image-20250608145924990](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250608145924990.png)
+![示意图](./assets/similar-diagram.svg)
 
 使用这个标签，上面的导航栏会跟着滚轮一起滑动
 
@@ -1545,16 +1545,16 @@ sticky 是一个新标签，有很多应用场景：![img](https://document.xxx.
         <nav></nav>
         <main>
             <img
-                 src= src="https://document.xxx.com/P3-1-HTML-CSS/1.8/1.jpg?x-oss-process=image/resize,h_500"
+                 src= ./assets/similar-diagram.svg
       />
       <img
-        src="https://document.xxx.com/P3-1-HTML-CSS/1.8/2.jpg?x-oss-process=image/resize,h_500"
+        src=./assets/similar-diagram.svg
       />
       <img
-        src="https://document.xxx.com/P3-1-HTML-CSS/1.8/3.jpg?x-oss-process=image/resize,h_500"
+        src=./assets/similar-diagram.svg
       />
       <img
-        src="https://document.xxx.com/P3-1-HTML-CSS/1.8/4.jpg?x-oss-process=image/resize,h_500"
+        src=./assets/similar-diagram.svg
       />
         </main>
     </body>
@@ -1589,7 +1589,7 @@ main {
 
 因为 nav 的 fixed 的属性会导致 main 导航栏脱离文档流，使得下方图片被遮挡，因此需要设置 padding-top 属性来解决遮挡问题。
 
- ![image-20250608151507363](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250608151507363.png)
+ ![示意图](./assets/similar-diagram.svg)
 
 头部导航栏的实现：
 
@@ -1599,11 +1599,11 @@ main {
 <nsv class="nav">
     <img
          class="logo"
-         src="https://style.xxx.com/img/xxx-components/logo.png"
+         src=./assets/similar-diagram.svg
      />
     <img
          class="avatar"
-         src="https://thirdqq.qlogo.cn/g?b=oidb&k=xnT9D0hzSGjSOOZkzqoutA&s=100&t=1555898643"
+         src=./assets/similar-diagram.svg
          />
 </nsv>
 ```
@@ -1622,7 +1622,7 @@ main {
 }
 ```
 
-![image-20250608151900032](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250608151900032.png)
+![示意图](./assets/similar-diagram.svg)
 
 已经创建了头部元素，怎么使得xxx图标靠左，头像靠右？
 
@@ -1642,11 +1642,11 @@ main {
   }
   ```
 
-![image-20250608152136976](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250608152136976.png)
+![示意图](./assets/similar-diagram.svg)
 
 ## 模态框：
 
-来看一下模态框的例子![image.png](https://document.xxx.com/P3-1-HTML-CSS/1.9/combat-1-modal/1.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)![image.png](https://document.xxx.com/P3-1-HTML-CSS/1.9/combat-1-modal/2.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)![image.png](https://document.xxx.com/P3-1-HTML-CSS/1.9/combat-1-modal/3.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+来看一下模态框的例子![示意图](./assets/similar-diagram.svg)![示意图](./assets/similar-diagram.svg)![示意图](./assets/similar-diagram.svg)
 
 > 1. 模态框总是在浏览器的中间，浏览器随意的放大缩小，模态框还是在浏览器中间，
 > 2. 模态框总是有一个半透明的背景
@@ -1655,7 +1655,7 @@ main {
 
 我们继续开发在 float 案例，建立一个模态框
 
-![img](https://document.xxx.com/P3-1-HTML-CSS/1.9/combat-1-modal/4.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 之前的代码：
 
@@ -1668,25 +1668,25 @@ main {
     <nav class="nav">
         <img
       class="logo"
-      src="https://style.xxx.com/img/xxx-components/logo.png"
+      src=./assets/similar-diagram.svg
     />
     <img
       class="avatar"
-      src="https://thirdqq.qlogo.cn/g?b=oidb&k=xnT9D0hzSGjSOOZkzqoutA&s=100&t=1555898643"
+      src=./assets/similar-diagram.svg
     />
     </nav>
     <main>
         <img
-      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/1.jpg?x-oss-process=image/resize,h_500"
+      src=./assets/similar-diagram.svg
     />
     <img
-      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/2.jpg?x-oss-process=image/resize,h_500"
+      src=./assets/similar-diagram.svg
     />
     <img
-      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/3.jpg?x-oss-process=image/resize,h_500"
+      src=./assets/similar-diagram.svg
     />
     <img
-      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/4.jpg?x-oss-process=image/resize,h_500"
+      src=./assets/similar-diagram.svg
     />
     </main>
 </body>
@@ -1767,11 +1767,11 @@ main {
 > 
 > 2. background-color: 我们用 rgba 设置颜色调节透明度为 
 
-![image-20250608211324499](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250608211324499.png)
+![示意图](./assets/similar-diagram.svg)
 
 ### 第二步：完成模态框：
 
-![image-20250608211348774](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250608211348774.png)
+![示意图](./assets/similar-diagram.svg)
 
 ```html
 <!DOCTYPE html>
@@ -1787,7 +1787,7 @@ main {
   </main>
   <div class="mask"></div>
   <div class="modal">
-    <img src="https://style.xxx.com/img/xxx-components/logo.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10" />
+    <img src=./assets/similar-diagram.svg />
   </div>
 </body>
 ```
@@ -1850,7 +1850,7 @@ main {
 
 > 对于这个位置的调整，我们需要知道，那个 left: 50% 与 top: 50%; 其实是标签的左上角的位置
 
-![image-20250609130536700](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250609130536700.png)
+![示意图](./assets/similar-diagram.svg)
 
 我们需要用 margin 元素边距属性进行修改
 
@@ -1863,7 +1863,7 @@ main {
 
 很多网站头步都有一个搜索框，
 
-![image-20250609145652078](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250609145652078.png)
+![示意图](./assets/similar-diagram.svg)
 
 注意图片里面红色部分，，这部分由两个组件构成，一个搜索框，一个搜索结果列表
 
@@ -1878,21 +1878,21 @@ main {
     <nav class="nav">
     <img
       class="avatar"
-      src="https://thirdqq.qlogo.cn/g?b=oidb&k=xnT9D0hzSGjSOOZkzqoutA&s=100&t=1555898643"
+      src=./assets/similar-diagram.svg
     />
   </nav>
   <main>
     <img
-      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/1.jpg?x-oss-process=image/resize,h_500"
+      src=./assets/similar-diagram.svg
     />
     <img
-      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/2.jpg?x-oss-process=image/resize,h_500"
+      src=./assets/similar-diagram.svg
     />
     <img
-      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/3.jpg?x-oss-process=image/resize,h_500"
+      src=./assets/similar-diagram.svg
     />
     <img
-      src="https://document.xxx.com/P3-1-HTML-CSS/1.8/4.jpg?x-oss-process=image/resize,h_500"
+      src=./assets/similar-diagram.svg
     />
   </main>
 
@@ -1935,7 +1935,7 @@ nav {
 
 ### 第一步：完成搜索框：
 
-![img](https://document.xxx.com/P3-1-HTML-CSS/1.9/combat-2-search/2.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 在效果图中，xxx 靠左，搜索框和头像靠右，通过第二节的学习，我们知道可以用 float 来实现。在这里，我们需要把右侧的输入框和头像整体包裹起来，实现靠右效果，我们来看 HTML 代码：
 
@@ -1945,7 +1945,7 @@ nav {
         <div class="serach">
             <input placeholder="搜你想搜的东西" />
             <img
-                 src="///style.xxx.com/img/xxx-components/search.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10"
+                 src=./assets/similar-diagram.svg
       />"
         </div>
         <img
@@ -1995,7 +1995,7 @@ nav {
 * 去掉默认的 input 效果
 * ">" CSS 代表直接子元素
 
-![image-20250609152009634](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250609152009634.png)
+![示意图](./assets/similar-diagram.svg)
 
 可以看见 **搜索图标** 还占用页面位置，我们希望其能往左下移动到 Input 框里面。我们还可以用 position：absolute 让其脱离文档流
 
@@ -2016,7 +2016,7 @@ nav {
 }
 ```
 
-![img](https://document.xxx.com/P3-1-HTML-CSS/1.9/combat-2-search/4.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 * 搜索结果宽度和头部搜索框的宽度是一致的
 * 搜索结果脱离文档流，是浮在所有元素上面的
@@ -2030,7 +2030,7 @@ nav {
         <div class="search">
             <input placeholder="搜你想搜的">
             <img 
-                 src=""
+                 src=./assets/similar-diagram.svg
             />
             <ul class="search-result">
                 <li>XXX</li>
@@ -2039,7 +2039,7 @@ nav {
         </div>
         <img
              class="avatar"
-             src=""
+             src=./assets/similar-diagram.svg
     </div>
 </nav>
 ```
@@ -2110,7 +2110,7 @@ background: rgba(0, 0, 0, 0.5);
 
 eg：
 
-![img](http://document.xxx.com/P3-1-HTML-CSS/1.10/1-gradient/1.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 ```css
 左边的色值:   #95CA47
@@ -2147,7 +2147,7 @@ eg：
 }
 ```
 
-![img](http://document.xxx.com/P3-1-HTML-CSS/1.10/1-gradient/2.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 在图中，我们看见已近有了**边框，阴影，圆角**效果，文字因为是白色所有看不出来，下面我们需要给按钮加入渐变背景色
 
@@ -2155,7 +2155,7 @@ eg：
 
 ### linear-gradient：
 
-![image-20250622144914026](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250622144914026.png)
+![示意图](./assets/similar-diagram.svg)
 
 根据上图，我们设置好**渐变类型， 渐变方向， 开始颜色， 结束颜色**即可实现简单的渐变效果。
 
@@ -2175,7 +2175,7 @@ eg：
 
 渐变不一定是从开始到结束，我们可以设置各种中间状态。例如从 30% - 70% 的渐变
 
-![img](http://document.xxx.com/P3-1-HTML-CSS/1.10/1-gradient/4.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+![示意图](./assets/similar-diagram.svg)
 
 使用：
 
@@ -2187,17 +2187,17 @@ background: linear-gradient(to right, xxxx 30%, xxx 70%);
 
 ## 背景图片：
 
-css 除了设置背景颜色，还可以设置背景图片，背景图片在网页中使用十分常见。我们来看一下网上一些背景图片使用案例。![image-20250630125635091](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250630125635091.png)
+css 除了设置背景颜色，还可以设置背景图片，背景图片在网页中使用十分常见。我们来看一下网上一些背景图片使用案例。![示意图](./assets/similar-diagram.svg)
 
-![image-20250630125645533](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250630125645533.png)
+![示意图](./assets/similar-diagram.svg)
 
-![image-20250630125702272](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250630125702272.png)
+![示意图](./assets/similar-diagram.svg)
 
 ### 基础使用：
 
 我们现在来学习背景图片的使用方法，先看看我们的目标，实现如下简单的效果
 
-![image-20250630125857224](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250630125857224.png)
+![示意图](./assets/similar-diagram.svg)
 
 > 一个容器中，有一串 HELLO WORLD 文字，同时有一张居中的 xxx LOGO 的背景。
 
@@ -2276,7 +2276,7 @@ css 除了设置背景颜色，还可以设置背景图片，背景图片在网�
 
 我们来完整的学习一下 background-position 的值。
 
-![image-20250630140626758](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250630140626758.png)
+![示意图](./assets/similar-diagram.svg)
 
 ### 高级特性：
 
@@ -2284,7 +2284,7 @@ css 除了设置背景颜色，还可以设置背景图片，背景图片在网�
 
 在上面的基础上，我们希望背景图片放大撑满整个容器，如下图所示：
 
-![image-20250630141304580](C:\Users\15956\AppData\Roaming\Typora\typora-user-images\image-20250630141304580.png)
+![示意图](./assets/similar-diagram.svg)
 
 我们需要认识一个新属性 **background-size** ，用这个属性可以设置背景图片的大小，我们直接来看看这个属性的值。
 
@@ -2337,4 +2337,4 @@ position-clip:  https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip
 
 ## qq注册页：
 
-对于 qq 注册页的头部开发：![img](https://document.xxx.com/P3-1-HTML-CSS/1.11/demo.png?x-oss-process=image/resize,w_800/watermark,image_d2F0ZXJtYXNrLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzEwMA==,t_60,g_se,x_10,y_10)
+对于 qq 注册页的头部开发：![示意图](./assets/similar-diagram.svg)

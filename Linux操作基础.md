@@ -2,13 +2,7 @@
 
 # 目录介绍：
 
-在linux里面，都是文件：![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/13a2aa97ced918e0de6b7a8d2319484d.png)![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9001d04c76af44059dc42350bbcba77f.png)![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ade1525cb2f65915f2fefafde06f01ff.png
-
-```
-/bin
-```
-
-文件是 binary 的缩写，这个目录存放着经常使用的命令，通过上方桌面就看见 bin 文件带有一个箭头，是链接到 /usr/bin 下面的，![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ade1525cb2f65915f2fefafde06f01ff.png)
+在linux里面，都是文件：![示意图](./assets/similar-diagram.svg)![示意图](./assets/similar-diagram.svg)![示意图](./assets/similar-diagram.svg)
 
 * **/sbin：**就是super User的意思，这里存放的是系统管理员使用的系统程序
 * **/home：**存放的是普通用户的主目录，在 Linux 里面每个用户都有自己的目录，以用户名来命名
@@ -29,33 +23,33 @@
 
 # vi / vim 编辑器：
 
-用户 @ 主机名 组成，~ 号代表当前目录位置， # 号代表管理员用户， $ 一般代表普通玩家![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8e542a8b2e59cacdb3d04aa9bf55f711.png)
+用户 @ 主机名 组成，~ 号代表当前目录位置， # 号代表管理员用户， $ 一般代表普通玩家![示意图](./assets/similar-diagram.svg)
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ef960ec698531da3db77a8185b382e72.png)
+![示意图](./assets/similar-diagram.svg)
 
 VI 是 Unix 操作系统和类似 Unix 操作系统中最常用的文本编辑器。VIM 编辑器是从 VI 发展出来的一个性能更强大的文本编辑器。可以主动的以字体颜色辨别语法正确性，方便程序设计，VIM 与 VI 编辑器完全相融
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/79140eae8a11902ffab5aa18c591475c.png)
+![示意图](./assets/similar-diagram.svg)
 
 模式转换：
 
 进来默认是一般模式，想要编辑文本就 按 i 进入编辑模式
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/15966d44ff8f29604cb89d72689a083e.png)
+![示意图](./assets/similar-diagram.svg)
 
 ## vim 常用语法:
 
 ### 一般模式下：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7a15bcb7603231c8e4e69af95ebb291f.png)
+![示意图](./assets/similar-diagram.svg)
 
 ### 编辑模式：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2ac14acdc5a79b42736660326ce8850c.png)
+![示意图](./assets/similar-diagram.svg)
 
 ### 命令模式：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7203dc74587fdd2ddbed38a1548507ce.png)
+![示意图](./assets/similar-diagram.svg)
 
 # 网络配置：
 
@@ -65,7 +59,7 @@ VI 是 Unix 操作系统和类似 Unix 操作系统中最常用的文本编辑�
 vim /etc/sysconfig/network-scripts/ifcfg-ens33
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2de2fa24aa419d3375b5678a80b7fddd.png)
+![示意图](./assets/similar-diagram.svg)
 
 执行 service network restart 重启网络，使网络生效。
 
@@ -91,7 +85,7 @@ vim /etc/hostname
 
 添加映射，保存后，可以直接访问 service，就可以访问到 220.151 ip 了
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f03f49fac288efeed12c9126dc71b597.png)
+![示意图](./assets/similar-diagram.svg)
 
 # 系统配置：
 
@@ -129,7 +123,7 @@ ls [选项] [目录或是文件]
 
 ### cd 切换目录：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/04f47b018883c005c7dd284e2d17fc51.png)
+![示意图](./assets/similar-diagram.svg)
 
 ### mkdir / rmdir 创建或删除一个空目录:
 
@@ -174,7 +168,7 @@ cp -r you/me/./
 
 rm [选项] deleteFile (功能描述：递归删除目录中所有内容)
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/173b9727d620a2c037c2c68e053a8a96.png)
+![示意图](./assets/similar-diagram.svg)
 
 ```bash
 rm yourL.txt # 删除文件
@@ -211,7 +205,7 @@ cat -n Love.txt # -n 参数显示行号
 
 more 要查看的文件
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bf4a0ca50fd1e80439478dbf59cb39da.png)
+![示意图](./assets/similar-diagram.svg)
 
 ```bash
 more Love.txt
@@ -221,7 +215,7 @@ more Love.txt
 
 less 指令用来分屏查看文件内容，它的功能与 more 指令类似，但是比 more 指令更加强大，支持各种显示终端。less 指令在显示文件内容时，并不是一次将整个文件加载出来之后才显示，而是根据显示需要加载内容，对于显示大型文件具有较高的效率。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0b9a12ba96b61384b253846146da5107.png)
+![示意图](./assets/similar-diagram.svg)
 
 ```bash
 less Love.txt
@@ -233,7 +227,7 @@ echo [选项] [输出内容]
 
 -e ：支持反斜线控制的字符转换
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/55b43b18cfddab9b908cb8aa340d56bd.png)
+![示意图](./assets/similar-diagram.svg)
 
 ```bash
 echo "yy\yy"  # yy\yy
@@ -335,7 +329,7 @@ date -s "2025-6-12 11:33:22"
 
 ### 查看文件权限：
 
-文件属性：![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/084d42dbedec177af82c97714dfcfa0c.png)
+文件属性：![示意图](./assets/similar-diagram.svg)
 
 **使用 ll 或者 ls -lh 命令查看权限**
 
@@ -359,11 +353,11 @@ date -s "2025-6-12 11:33:22"
 
 [ x ] 代表可执行 （execute） ： 可以进入该目录
 
-#### ll 命令：![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dc0addc13409b006a58512cc09a50f6c.png)
+#### ll 命令：![示意图](./assets/similar-diagram.svg)
 
 #### ls -lh 命令，文件大小清楚：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/09ea3cfbc7db0c7092d4f2bb1046d608.png)
+![示意图](./assets/similar-diagram.svg)
 
 1. 如果查看到的是文件：链接数指硬链接个数
 2. 如果是文件夹：指的是子文件个数
@@ -457,7 +451,7 @@ chgrp root s.txt
 
 ### find 查找文件或者目录：
 
-find 指令将从指定目录向下递归地历遍其各个子目录，将满足条件的文件显示在终端。![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/621c7438c2067a49318d64a78b9925f0.png)
+find 指令将从指定目录向下递归地历遍其各个子目录，将满足条件的文件显示在终端。![示意图](./assets/similar-diagram.svg)
 
 #### 按照文件名：根据名称查找  /目录  下的 XXX.txt 文件
 
@@ -568,7 +562,7 @@ gizp 文件
 gzip Love.txt
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ca2b49191e9b0b0684e6f2876197d387.png)
+![示意图](./assets/similar-diagram.svg)
 
 #### gunzip 压缩：
 
@@ -607,7 +601,7 @@ tar [选项] XXX.tar,gz 将要打包进去的内容 （打包目录，压缩后�
 
 #### 参数：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bb882afc07fc6e3e1c9a1f3ae16aed8c.png)
+![示意图](./assets/similar-diagram.svg)
 
 #### 压缩文件：
 
