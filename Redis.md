@@ -317,6 +317,9 @@ public interface Serializable {
 }
 ```
 那么实现了 Serializable 接口，不必再多写方法实现代码，意义主要是**标识**此对象能够被序列化。   
+
+### 优化重名判断逻辑  
+
 修改 UserServiceImpl.register() 代码，有先从 Redis 查询此用户名有没有对应的用户对象，如果没有，再从数据库查询一遍。  
 ```java
 UserDO userDO = (UserDO)redisTemplate.opsForValue().get(userName);
@@ -332,6 +335,8 @@ if(user != null){
 ```
 要读写缓存Value，就要调用 redisTemplate.opsForValue()，然后再调用 get() 方法，根据 key 取得缓存值。这里以用户名作为缓存 key   
 redisTemplate.opsForValue() 相当于固定用法。
+
+
 ### 用户实例放入缓存  
 UserServiceImpl.register() 方法结尾，调用 DAO 方法祥数据库增加一条数据后，把新用户实例存入 Redis： 
 ```java
@@ -347,3 +352,84 @@ redisTemplate.opsForValue().set(userName, userDO1);
 向 Redis 存数据，同样需要调用 redisTemplate.opsForValue(), 再调用 set() 方法：
 > 存数据的 Key 要和读数据的 Key 和 Value 对应起来
 由于新用户注册成功后，对象存入缓存，那么重新注册的时候，就不会读取数据库了，只会从缓存查询一次数据。
+
+## 用户 Session  
+我们现在来引入 Redis， 作为 Session 数据的缓存，以解决分布式系统的共享 Session 问题。  
+### 依赖引入  
+修改 pom 文件，先删除旧的依赖项：   
+```xml
+<dependency>
+  <groupId>org.springframework.session</groupId>
+  <artifactId>spring-session-core</artifactId>
+</dependency>
+``` 
+然后添加相关的依赖：
+
+```xml
+<!-- spring session 支持 -->
+<dependency>
+  <groupId>org.springframework.session</groupId>
+  <artifactId>spring-session-data-redis</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.redisson</groupId>
+  <artifactId>redisson-spring-boot-starter</artifactId>
+  <version>3.13.0</version>
+</dependency>
+```  
+* `spring-session-data-redis` 是核心依赖库，会自动完成 Session 同步到 Redis 等操作  
+* `redisson-spring-boot-starter` 是需要用到的 Redis 客户端，提供很多分布式相关操作服务，操作 Session 数据的过程中，与核心依赖库搭配使用。   
+
+### 修改 Session 配置类  
+之前我们使用 spring 封装实现的 Session：
+```java
+@Configuration
+@EnableSpringHttpSession
+public class SpringHttpSessionConfig {
+    @Bean
+    public CookieSerializer cookieSerializer() {
+        ...
+    }
+
+    @Bean
+    public MapSessionRepository sessionRepository() {
+        return new MapSessionRepository(new ConcurrentHashMap<>());
+    }
+} 
+```
+核心是使用 @EnableSpringHttpSession 注解。 
+
+
+#### 数据仓库   
+Session 数据存储在服务器，是具体在哪?   
+系统未提供默认的存储 Session 数据的仓库，所以需要在 sessionRepository() 方法中 new 一个仓库对象。     
+> Session 存储于服务器的内存在学习阶段是没有问题，但是在分布式系统中就不合适了。   
+实际上每个用户的 Session 数据存储于线程安全的，支持高效并发的 ConcurrentHashMap。   
+> ConcurrentHashMap 是 java.util.concurrent 包的重要成员
+#### 定制 Session Cookie   
+`cookieSerializer()`  的作用是定制 Cookie 中的 Session 信息内容如何写   
+#### 两个修改步骤   
+引入 Redis 解决分布式系统的共享 Session 问题，就需要对代码做一些修改   
+我们要使用 Redis 存储的 Session 的方案，核心就是删除 @EnableSpringHttpSession 注解，改为 @EnableRedisHttpSession 注解    
+然后删除 `sessionRepository()` 方法，不再创建仓库，Redis就是 仓库，系统已经封装好了。   
+```java
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
+import org.springframework.session.web.http.CookieSerializer;
+import org.springframework.session.web.http.DefaultCookieSerializer;
+
+@Configuration
+@EnableRedisHttpSession(maxInactiveIntervalInSeconds = 300)
+public class SpringHttpSessionConfig {
+    @Bean 
+    public CookieSerializer cookieSerializer() {
+        ...
+    }
+}
+```
+> `cookieSerializer()` 保持不变，仍然可以制定 Cookie 中的 Session 信息内容如何写。   
+使用注解的优点就有了，只需要一个注解，系统自动完成 Session 数据 同步存储到 Redis。   
+#### 过期时间   
+在使用 @EnableRedisHttpSession 时，可以通过 `maxInactivalInSeconds` 注解参数设置 Session 数据的过期时间，单位是秒，如果不设置，默认为 30 分钟
+> 由于 Redis 空间有限，所以必须根据实际情况设置一个相对合理的过期时间，既提升 Redis 利用率，又要防止空间撑满。    
