@@ -432,4 +432,132 @@ public class SpringHttpSessionConfig {
 使用注解的优点就有了，只需要一个注解，系统自动完成 Session 数据 同步存储到 Redis。   
 #### 过期时间   
 在使用 @EnableRedisHttpSession 时，可以通过 `maxInactivalInSeconds` 注解参数设置 Session 数据的过期时间，单位是秒，如果不设置，默认为 30 分钟
-> 由于 Redis 空间有限，所以必须根据实际情况设置一个相对合理的过期时间，既提升 Redis 利用率，又要防止空间撑满。    
+> 由于 Redis 空间有限，所以必须根据实际情况设置一个相对合理的过期时间，既提升 Redis 利用率，又要防止空间撑满。  
+
+## 缓存穿透  
+当网站遭遇大量，密集，持续的请求登录，但是都是输入错误密码，不存在账号时，数据库偶尔会宕机。  
+应为该类请求的账号，Redis 不会存入缓存，实际上每次都会去查询数据库，导致数据库压力仍然持续过大，读写数据变慢，甚至宕机，此类属于系统漏洞。  
+这种是的缓存失去意义，称之为**缓存击穿**。  
+### 漏洞解决  
+第一次从数据库查询不到数据时，仍然把这个空结果进行缓存，不过，要设置过期时间，推荐不超过五分钟。  
+> 数据库查询结果为空，可能有两种情况：数据不存在与数据库有故障   
+```java
+import java.util.eoncurrent.TimeUnit;
+
+// 只 new 实例但是不设置任何属性，相当于一个空对象  
+userDO = new UserDO();
+redisTemplate.opsForValue().set();
+```
+当用户第二次访问的时候，无论账号是否正确，Redis 中都缓存了数据，避免了再次查询数据库。而缓存存住的错误账号数据，由于没有属性值，则验证失败，实际不会去执行。   
+
+
+## Redis 存放数据乱码数据   
+Redis 底层为 C 开发，所以 Java 程序存入 Redis 数据时，会把数据序列化，而 Java 默认的序列化方法，是把内容编程字节码，计算机能识别，人识别不了。  
+### 解决
+这时候需要添加一个 config 类   
+类中注入 RedisTemplate 实例：
+```java
+@Autowired
+private RedisTemplate redisTemplate;
+
+// 重置序列化方法（reset serializer）
+@Bean
+public RedisTemplate redisTemplateInit() {
+    // 设置 序列化 Key 工具
+    redisTemplate.setKeySerializer(new StringRedisSerializer());
+    // 设置序列化 Value 工具
+    redisTemplate.setValueSerialzer(new GenericJackson2JsonRedisSerializer());
+    // 设置 hash key
+    redisTemplate.setHashKeySerializer(new GenericJackson2JsonRedisSerilizer());
+    // 设置 hash value
+    redisTemplate.setHashValueSerializer(new GenericJJackson2JsonRedisSerializer());
+    redisTemplate.afterPropertiseSet();
+    return redisTemplate;
+}
+```
+Redis 数据的 key 使用字符串（StringRedisSerializer）的序列化方式，Value 用 JSON（GenericJackson2JsonRedisSerializer）的序列化/反序列化方法。  
+Hash 是一种 Redis 的数据类型。setHashKeySerializer() 和 setHashValueSerializer() 就是支持 hash 的。   
+> 注意：添加了 config 后，Redis 以前存入的旧数据是不兼容的，所以旧数据干脆废掉。  
+> > session 数据仍然是乱码，但是 Session 是系统处理的，不需要干预。  
+
+## 类目系统设计  
+比如淘宝，淘宝用户点击淘宝的上分类栏浏览商品的过程。这些分类栏中的展示内容，通常叫做类目。类目的显著特点，有着明显的层级关系。  
+### 类目的设计
+在 java 中我们设计类目系统，有两个核心步骤：  
+1. 模型设计
+2. 服务设计
+还有常见的延申步骤：  
+1. 技术选型。包括各种相关技术选择。常见到的是框架选型和存储方案选型。
+   * 框架选型
+   * 存储方案选型
+2. 完成 web 层，包括完成 control 和 页面。  
+
+### 模型设计  
+模型设计方法，主要源自于充分理解具体的需求，而对业务需求深刻理解，具备扎实的技术功底。   
+理解每一次的模型，并且总结，思考。当遇见新模型需要设计时，主要的思路和方法就是寻找可以借鉴的模型，再加上自己对于需求的理解。  
+对于本次我们可以设计出类目模型：
+```
+┌─────────────────────────────────────────———————————————───┐
+│              Category 类结构                │
+├───────────────┬────────────────────────────┬──────────────┤
+│    字段名      │           类型             │     说明      │
+├───────────────┼────────────────────────────┼──────────────┤
+│ id                │ String                    │ 主键       │
+│ name              │ String                    │ 类目名称   │
+│ description       │ String                    │ 类目描述   │
+│ parentCategoryId  │ String                    │ 父类目ID   │
+│ subCategoryList   │ List〈Category〉          │ 子类目列表  │
+│ gmtCreated        │ LocalDateTime             │ 创建时间   │
+│ gmtModified       │ LocalDateTime             │ 修改时间   │
+└───────────────┴────────────────────────────┴──────────────┘
+```
+实际上这个设计不是很复杂，id, gmtCreated与 gmtModified 是通用的设计，名称和描述两个属性也是比较常见的。为了表示类目间的上下级关系，设计了 parentCategroyId 和 subCategoryList 两个属性：  
+* 用 subCategoryList 表示 子类目 数据，其类型是 List， 因为可能存在多个子类目；
+* 为了查询方便我们在模型上也加了 父类目 id， 这样只要根据一个类目 id，即可查询所有 子类目 信息。    
+> **注意：** 由于父类目已经包含了下属子类目，为了避免出现双向关联，我们只需在子类目模型中标识父类目 `id`，而不直接关联父类目对象。
+>
+> 如果采用双向关联，可能会出现如下情形：
+>
+> - 父类拥有子类集合
+> - 子类又持有父类对象
+>
+> 示例代码如下：
+>
+> ```java
+> // 父类目
+> class ParentCategory {
+>     Long id;
+>     String name;
+>     // 父类包含子类集合
+>     List<Category> children;
+> }
+>
+> // 子类目
+> class ChildCategory {
+>     Long id;
+>     String name;
+>     Long parentId;
+>     // 子类还存完整的父对象
+>     Category parent;
+> }
+> ```
+>
+> 这样会导致出现双向引用死循环：父 → 子 → 父...  
+> 在序列化或查询父类对象时，父对象中有子类列表，每个子类又引用父对象，最终会递归下去导致无法完成对象转换。
+所以 只保留单向关联，父类目只保留 List<Category> children 。 子类目 只存 parentId 字段。  
+
+### 服务设计
+从上面的操作知道，我们其实只需要实现**添加类目，查询所有类目信息，查询单个类目功能**就可以满足需求。
+```  
+| 功能名称        | 功能描述                                             |
+| --------------- | ---------------------------------------------------- |
+| 添加类目        | 完成单个类目信息的录入                                |
+| 查询单个类目    | 根据类目主键查询类目详情及其对应的子类目信息          |
+| 查询所有类目信息 | 查询并展示所有类目的完整信息列表                      |
+```
+对于大型类目系统，每天存在大量人进入访问，这种我们需要引入 Redis ，虽然 类目 具备上下级关系，但是只是关联关系，就存储来说每一条类目都是独立的记录。多条类目组成一组类目数据。这个场景就很适合 Redis 的数据结构 List。   
+
+### 插入类目数据  
+在完成需求分析，模型设计和技术选型后，进入开发阶段。  
+#### List 概念
+* Redis List(列表) 是简单的字符串列表，
